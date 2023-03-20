@@ -1,5 +1,5 @@
 {
-  "baseURL": "https://blog.vlang.io/",
+  "baseURL": "https://blog.vlang.foundation/",
   "languageCode": "en-us",
   "title": "Blog | The V Programming Language",
   "ignoreFiles": [".scss$", ".ts$"],
