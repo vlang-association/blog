@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="articles-by-tag">
+  <h1 class="tag-title">Articles with tag "{{ .Title | markdownify }}"</h1>
+  <p>{{ .Params.subtitle | markdownify }}</p>
+
+  <div class="posts">
+    {{ range (.Paginate .Pages.ByPublishDate.Reverse).Pages }}
+    <a class="post" href="{{ .RelPermalink }}">
+      {{ $dateTime := .Params.date.Format "2006-01-02" }}
+      {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
+      <p class="date">
+        <time datetime="{{ $dateTime }}">
+          {{ .Params.date.Format $dateFormat }}
+        </time>
+      </p>
+
+      <h3 class="title">{{ .Title | markdownify }}</h3>
+      <p class="description">{{ .Params.subtitle | markdownify }}</p>
+      <p class="author">{{ .Params.authorname }}</p>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

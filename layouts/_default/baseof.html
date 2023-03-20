@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <main>
+      <article>{{ block "main" .}}{{ end }}</article>
+    </main>
+    {{ partial "footer.html" . }}
+    <!-- Include KaTeX if necessary -->
+    {{ if .Params.katex }} {{ partial "katex.html" . }} {{ end }}
+    <!-- Include scripts -->
+    {{ partial "script.html" .}}
+  </body>
+</html>

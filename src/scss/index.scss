@@ -1,0 +1,61 @@
+@import "fonts";
+@import "colors";
+@import "header";
+@import "post";
+@import "footer";
+@import "article";
+@import "articles-by-tag";
+@import "404-page";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrainsSans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  margin: 70px 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.horizontal {
+  width: 100%;
+  padding: 50px 50px;
+
+  display: grid;
+
+  @media (max-width: 1000px) {
+    padding: 50px 30px;
+  }
+
+  .articles {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    main {
+      @media (max-width: 1000px) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+main {
+  margin: 0 20px 0 0;
+
+  @media (max-width: 1000px) {
+    margin: 0 30px;
+  }
+}
+
+.latest-posts {
+  h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}

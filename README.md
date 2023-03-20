@@ -1,2 +1,1 @@
-# blog
-V Foundation Blog
+# Blog

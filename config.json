@@ -1,0 +1,24 @@
+{
+  "baseURL": "https://blog.vlang.io/",
+  "languageCode": "en-us",
+  "title": "Blog | The V Programming Language",
+  "ignoreFiles": [".scss$", ".ts$"],
+  "minify": {
+    "minifyOutput": true
+  },
+  "permalinks": {
+    "blog": "/:filename:"
+  },
+  "taxonomies": {
+    "tag": "categories"
+  },
+  "markup": {
+    "highlight": {
+      "style": "friendly",
+      "tabWidth": 4
+    },
+    "renderer": {
+      "hardWraps": true
+    }
+  }
+}
