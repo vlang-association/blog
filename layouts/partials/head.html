@@ -6,102 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <title>{{ .Title | markdownify }} | The V Programming Language</title>
-  <meta
-    name="title"
-    content="{{ .Title | markdownify }} | The V Programming Language"
-  />
-  <meta
-    property="og:title"
-    content="{{ .Title | markdownify }} | The V Programming Language"
-  />
-  <meta
-    property="twitter:title"
-    content="{{ .Title | markdownify }} | The V Programming Language"
-  />
-
-  <meta property="og:type" content="website" />
-  <meta property="twitter:card" content="summary_large_image" />
-
-  <meta property="og:description" content="{{ .Summary }}" />
-  <meta name="description" content="{{ .Summary }}" />
-  <meta property="twitter:description" content="{{ .Summary }}" />
-
-  <meta property="og:url" content="{{ .Permalink }}" />
-  <meta property="twitter:url" content="{{ .Permalink }}" />
-
-  <meta property="twitter:site" content="@v_language" />
-
-  {{ if .Params.image }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />
-  <meta
-    property="twitter:image"
-    content="{{ .Site.BaseURL }}{{ .Params.image }}"
-  />
-  {{ end }}
-
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="192x192"
-    href="/android-icon-192x192.png"
-  />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+  <title>{{ .Title | markdownify }} | V Foundation</title>
 
   <script type="text/javascript" src="/js/theme.js"></script>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-    rel="stylesheet"
-  />
   <link rel="stylesheet" href="/css/index.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
-    integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
-    crossorigin="anonymous"
-  />
-  {{ if .Params.katex }}
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"
-    integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"
-    crossorigin="anonymous"
-  />
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"
-    integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"
-    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
-    crossorigin="anonymous"
-    onload='renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\[", right: "\\]", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false },
-      ],
-    });'
-  ></script>
-  {{ end }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"/>
 </head>

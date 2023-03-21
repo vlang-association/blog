@@ -1,7 +1,7 @@
 {
   "baseURL": "https://blog.vlang.foundation/",
   "languageCode": "en-us",
-  "title": "Blog | The V Programming Language",
+  "title": "Blog | V Foundation",
   "ignoreFiles": [".scss$", ".ts$"],
   "minify": {
     "minifyOutput": true
@@ -11,6 +11,9 @@
   },
   "taxonomies": {
     "tag": "categories"
+  },
+  "params": {
+    "visibleTitle": "Blog"
   },
   "markup": {
     "highlight": {
