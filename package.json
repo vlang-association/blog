@@ -6,7 +6,7 @@
     "ts": "cd src/ts; cp -r ./** ../../static/js;",
     "tsw": "cd src/ts; tsc -w &>/dev/null &",
     "ss": "sass src/scss:static/css",
-    "ssw": "sass --watch src/scss:static/css &>/dev/null &",
+    "sass-watch": "sass --watch static/scss/index.scss:static/css/index.css",
     "clean": "rm -rf static/css; rm -rf static/js; rm -rf public"
   },
   "author": "Subhomoy Haldar",
