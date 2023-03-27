@@ -7,9 +7,6 @@
       <article>{{ block "main" .}}{{ end }}</article>
     </main>
     {{ partial "footer.html" . }}
-    <!-- Include KaTeX if necessary -->
-    {{ if .Params.katex }} {{ partial "katex.html" . }} {{ end }}
-    <!-- Include scripts -->
     {{ partial "script.html" .}}
   </body>
 </html>
