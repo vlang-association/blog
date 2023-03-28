@@ -1,0 +1,56 @@
+blockquote {
+  border-radius: 6px;
+  color: var(--blockquote-text-color);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 15px;
+  box-sizing: border-box;
+  margin: 20px 0 30px;
+  padding: 16px;
+
+  .prompt__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .prompt__content {
+
+    & > p:first-child {
+      margin-top: 0;
+    }
+
+    & > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin: 0 !important;
+    font-size: 16px;
+  }
+}
+
+blockquote.note {
+  background-color: var(--blockquote-note-background-color);
+
+  .prompt__icon {
+    fill: var(--blockquote-note-icon-color);
+  }
+}
+
+blockquote {
+  background-color: var(--blockquote-tip-background-color);
+
+  .prompt__icon {
+    fill: var(--blockquote-tip-icon-color);
+  }
+}
+
+blockquote.warning {
+  background-color: var(--blockquote-warning-background-color);
+
+  .prompt__icon {
+    fill: var(--blockquote-warning-icon-color);
+  }
+}

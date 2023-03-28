@@ -1,2 +1,20 @@
 <script type="text/javascript" src="/js/header.js"></script>
 <script type="text/javascript" src="/js/header-search.js"></script>
+<script type="text/javascript" src="/js/pre-code-blocks.js"></script>
+<script type="text/javascript" src="/js/vlang-playground.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const playgroundElements = [...document.querySelectorAll(".v-code")];
+        playgroundElements.forEach(playgroundElement => {
+            const playground = Playground.create(playgroundElement, {
+                fontSize: "14px",
+                highlightOnly: !playgroundElement.classList.contains("play"),
+                showFooter: false,
+                showLineNumbers: true,
+                theme: "dark"
+            });
+            playgrounds.push(playground);
+        });
+    })
+</script>

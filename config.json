@@ -22,6 +22,14 @@
     },
     "renderer": {
       "hardWraps": true
+    },
+    "goldmark": {
+      "parser": {
+        "attribute": {
+          "block": true,
+          "title": true
+        }
+      }
     }
   }
 }

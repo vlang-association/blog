@@ -6,6 +6,8 @@
 @import "article";
 @import "articles-by-tag";
 @import "404-page";
+@import "pre-code-blocks";
+@import "blockquote";
 
 * {
   box-sizing: border-box;
@@ -23,6 +25,7 @@ body {
 }
 
 .horizontal {
+  position: relative;
   width: 100%;
   padding: 50px 50px;
 
@@ -46,10 +49,10 @@ body {
 }
 
 main {
-  margin: 0 20px 0 0;
+  margin: 0 0 0 0;
 
   @media (max-width: 1000px) {
-    margin: 0 30px;
+    margin: 0 0;
   }
 }
 

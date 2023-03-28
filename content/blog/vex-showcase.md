@@ -138,9 +138,9 @@ you will get a 404 error. In order to remedy that, you can add a new
 route for `/` to the app like this:
 
 ```v
-	app.route(.get, '/', fn (req &ctx.Req, mut res ctx.Resp) {
-		res.send('This is the homepage. Navigate to /users/ned', 200)
-	})
+app.route(.get, '/', fn (req &ctx.Req, mut res ctx.Resp) {
+	res.send('This is the homepage. Navigate to /users/ned', 200)
+})
 ```
 
 Now navigate to this page, or refresh the page if you're already on it.

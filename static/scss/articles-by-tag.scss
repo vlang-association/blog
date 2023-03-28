@@ -1,9 +1,39 @@
+html {
+  --article-by-tag-title-color: var(--text-color);
+}
+
+html[data-theme="dark"] {
+  --article-by-tag-title-color: var(--white);
+}
+
 .articles-by-tag {
   width: 100%;
   padding: 50px 50px;
 
+  @media (max-width: 1000px) {
+    padding: 50px 20px 0;
+  }
+  
   .tag-title {
     margin-bottom: 50px;
+
+    .category-label {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 0;
+      color: var(--secondary-color);
+    }
+
+    h1.title {
+      font-size: 55px;
+      line-height: 1;
+
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      color: var(--article-by-tag-title-color);
+    }
   }
 
   margin-bottom: 50px;

@@ -1,0 +1,119 @@
+html {
+  --copy-button-ok-text-color: var(--light-green);
+  --copy-button-error-text-color: var(--orange);
+  --copy-button-background-color: var(--gray-f9);
+}
+
+html[data-theme="dark"] {
+  --copy-button-ok-text-color: var(--light-green);
+  --copy-button-error-text-color: var(--orange);
+  --copy-button-background-color: var(--almost-black);
+}
+
+:not(.v-code) pre {
+  position: relative;
+  white-space: pre;
+  padding: 12px 20px 12px;
+  color: var(--block-code-text-color);
+  background-color: var(--block-code-background-color);
+
+  border: 1px solid var(--block-code-border-color);
+  border-radius: 8px;
+
+  overflow-x: scroll;
+
+  code {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+  }
+
+  &.terminal__output {
+    border: unset;
+  }
+
+  .copy-button {
+    position: absolute;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+    background-color: transparent;
+    border-radius: 8px;
+    opacity: 0.4;
+
+    top: 10px;
+    right: 10px;
+
+    padding: 0;
+
+    z-index: 100;
+
+    &.bottom {
+      top: unset;
+      bottom: 10px;
+    }
+
+    &.copy-success {
+      outline: 1px solid var(--copy-button-ok-text-color);
+
+      svg {
+        stroke: var(--copy-button-ok-text-color) !important;
+      }
+
+      &:before {
+        content: "Copied";
+        position: absolute;
+        left: calc(-100% - 10px);
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: var(--copy-button-ok-text-color);
+        background-color: var(--copy-button-background-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    &.copy-error {
+      outline: 1px solid var(--copy-button-error-text-color);
+
+      svg {
+        stroke: var(--copy-button-error-text-color) !important;
+      }
+
+      &:before {
+        content: "Error (see console log)";
+        position: absolute;
+        width: max-content;
+        left: calc(-100% - 50px);
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: var(--copy-button-error-text-color);
+        background-color: var(--copy-button-background-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      opacity: 1;
+      background-color: var(--button-hover-background-color);
+
+      svg {
+        stroke: var(--brand-color);
+      }
+    }
+
+    svg {
+      width: unset;
+      height: unset;
+      margin: 0;
+    }
+  }
+}

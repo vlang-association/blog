@@ -1,19 +1,17 @@
 {
   "name": "vlang-blog",
   "version": "1.0.0",
-  "description": "Source code for VLang's Blog",
+  "description": "Source code for V Foundation Blog",
   "scripts": {
-    "ts": "cd src/ts; cp -r ./** ../../static/js;",
-    "tsw": "cd src/ts; tsc -w &>/dev/null &",
-    "ss": "sass src/scss:static/css",
     "sass-watch": "sass --watch static/scss/index.scss:static/css/index.css",
-    "clean": "rm -rf static/css; rm -rf static/js; rm -rf public"
+    "hugo-watch": "hugo serve",
+    "clean": "rm -rf public"
   },
-  "author": "Subhomoy Haldar",
+  "author": "Petr Makhnev",
   "bugs": {
-    "url": "https://github.com/vlang/v/issues"
+    "url": "https://github.com/vlang-foundation/blog/issues"
   },
-  "homepage": "https://vlang.io/",
+  "homepage": "https://vlang.foundation/",
   "dependencies": {
     "sass": "^1.41.1",
     "typescript": "^4.4.3"
