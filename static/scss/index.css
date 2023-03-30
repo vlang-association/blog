@@ -1059,7 +1059,7 @@ html[data-theme=dark] {
 }
 .article-card .author .avatar img {
   width: 100%;
-  height: 100%;
+  height: 101%;
   object-fit: cover;
 }
 
