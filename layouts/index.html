@@ -32,50 +32,47 @@
 
     <div class="articles">
         <main>
-            <div id="latest" class="latest-posts">
+            <div class="posts-block">
                 <h2>Latest</h2>
-                <div class="posts">
+                <div class="article-cards">
                     {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
                     <!-- Select the blog posts only -->
                     {{ if eq .Params.Page "Blog" }}
-                    <a class="post" href="{{ .RelPermalink }}">
-                        {{ $dateTime := .Params.date.Format "2006-01-02" }}
-                        {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
-                        <p class="date">
-                            <time datetime="{{ $dateTime }}">
-                                {{ .Params.date.Format $dateFormat }}
-                            </time>
-                        </p>
+                    {{ partial "article-card.html" . }}
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
 
-                        <h3 class="title">{{ .Title | markdownify }}</h3>
-                        <p class="description">{{ .Params.subtitle | markdownify }}</p>
-                        <p class="author">{{ .Params.authorname }}</p>
-                    </a>
+            <div class="posts-block">
+                <h2>
+                    Announcements
+                </h2>
+                <div class="article-cards">
+                    {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
+                    {{ if in .Params.categories "Announcements" }}
+                    {{ partial "article-card.html" . }}
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="posts-block">
+                <h2>
+                    Tutorials
+                </h2>
+                <div class="article-cards">
+                    {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
+                    {{ if in .Params.categories "Tutorials" }}
+                    {{ partial "article-card.html" . }}
                     {{ end }}
                     {{ end }}
                 </div>
             </div>
         </main>
-<!--        <aside>-->
-<!--            <h2>-->
-<!--                <a href="/blog/">All Posts</a> &nbsp;-->
-<!--            </h2>-->
-<!--            <p>-->
-<!--                We post community updates, short guides, and other information-->
-<!--                regularly.-->
-<!--            </p>-->
-<!--            <h2>-->
-<!--                <a href="/people/">People</a> &nbsp;-->
-<!--            </h2>-->
-<!--            <p>-->
-<!--                It is an organised collection of articles on the contributors who make-->
-<!--                V Lang greater than the sum of its parts.-->
-<!--            </p>-->
-<!--        </aside>-->
     </div>
 </div>
 {{ partial "footer.html" . }}
-<!-- Scripts -->
 {{ partial "script.html" .}}
 </body>
 </html>

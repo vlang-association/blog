@@ -8,7 +8,6 @@ authorlink: subhomoy-haldar
 categories: [ "tutorials" ]
 date: 2021-10-28T10:47:53+05:30
 image: images/getting-started-with-v/getting-started.png
-pinned: true
 ---
 
 ## Introduction

@@ -6,7 +6,7 @@
   </div>
   <p>{{ .Params.subtitle | markdownify }}</p>
 
-  <div class="posts">
+  <div class="article-cards">
     {{$firstPage := index (.Pages.ByPublishDate.Reverse) 0}}
 
     {{with $firstPage}}
@@ -31,19 +31,7 @@
     {{ end }}
 
     {{ range (.Paginate .Pages.ByPublishDate.Reverse).Pages }}
-    <a class="post" href="{{ .RelPermalink }}">
-      {{ $dateTime := .Params.date.Format "2006-01-02" }}
-      {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
-      <p class="date">
-        <time datetime="{{ $dateTime }}">
-          {{ .Params.date.Format $dateFormat }}
-        </time>
-      </p>
-
-      <h3 class="title">{{ .Title | markdownify }}</h3>
-      <p class="description">{{ .Params.subtitle | markdownify }}</p>
-      <p class="author">{{ .Params.authorname }}</p>
-    </a>
+    {{ partial "article-card.html" . }}
     {{ end }}
   </div>
 </div>

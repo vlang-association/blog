@@ -4,6 +4,8 @@
 <script type="text/javascript" src="/js/vlang-playground.js"></script>
 
 <script>
+    const theme = localStorage.getItem("theme");
+
     document.addEventListener('DOMContentLoaded', () => {
         const playgroundElements = [...document.querySelectorAll(".v-code")];
         playgroundElements.forEach(playgroundElement => {
@@ -12,7 +14,7 @@
                 highlightOnly: !playgroundElement.classList.contains("play"),
                 showFooter: false,
                 showLineNumbers: true,
-                theme: "dark"
+                theme: theme
             });
             playgrounds.push(playground);
         });

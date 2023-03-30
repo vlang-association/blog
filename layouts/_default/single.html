@@ -19,11 +19,21 @@
             <h1 class="title">{{ .Title | markdownify }}</h1>
 
             {{ if ne .Params.Page "People" }}
+            <div class="article-description">
+                {{ .Params.subtitle | markdownify }}
+            </div>
+
+            <div class="article-image">
+                {{ if .Params.image }}
+                <img src="/{{ .Params.image }}" alt="{{ .Params.summary | markdownify }}">
+                {{ end }}
+            </div>
+
             <div class="details">
                 <p class="author">
-                <span class="avatar">
-                    <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
-                </span>
+                    <span class="avatar">
+                        <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
+                    </span>
                     <a href="/people/{{ .Params.authorlink }}">
                         {{ .Params.authorname }}
                     </a>
@@ -39,12 +49,6 @@
                     </time>
                 </div>
             </div>
-
-            <div class="article-image">
-                {{ if .Params.image }}
-                <img src="/{{ .Params.image }}" alt="{{ .Params.summary | markdownify }}">
-                {{ end }}
-            </div>
             {{ end }}
         </div>
     </div>
@@ -59,26 +63,14 @@
         {{ if eq .Params.Page "People" }}
         <h1>Posts by {{ .Title | markdownify }}</h1>
 
-        <div class="posts">
+        <div class="article-cards">
             {{ range .Site.Pages.ByPublishDate.Reverse }}
             <!-- Iterate over all top level pages -->
             {{ if eq .Params.Page "Blog" }}
             <!-- We are interested only in the blog posts -->
             <!-- Process latest posts first -->
             {{ if eq .Params.authorlink $authorlink }}
-            <a class="post" href="{{ .RelPermalink }}">
-                {{ $dateTime := .Params.date.Format "2006-01-02" }}
-                {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
-                <p class="date">
-                    <time datetime="{{ $dateTime }}">
-                        {{ .Params.date.Format $dateFormat }}
-                    </time>
-                </p>
-
-                <h3 class="title">{{ .Title | markdownify }}</h3>
-                <p class="description">{{ .Params.subtitle | markdownify }}</p>
-                <p class="author">{{ .Params.authorname }}</p>
-            </a>
+            {{ partial "article-card.html" . }}
             {{ end }} {{ end }} {{ end }}
         </div>
         {{ end }}

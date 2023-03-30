@@ -1,0 +1,27 @@
+<a class="article-card" href="{{ .RelPermalink }}">
+    <span class="image">
+        <img src="/{{ .Params.image }}"
+             alt="{{ .Params.summary | markdownify }}"
+        />
+    </span>
+
+    {{ $dateTime := .Params.date.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
+    <p class="date">
+        <time datetime="{{ $dateTime }}">
+            {{ .Params.date.Format $dateFormat }}
+        </time>
+    </p>
+
+    <h3 class="title">{{ .Title | markdownify }}</h3>
+    <p class="description">{{ .Params.subtitle | markdownify }}</p>
+
+    <p class="author">
+        <span class="avatar">
+            <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
+        </span>
+        <span>
+            {{ .Params.authorname }}
+        </span>
+    </p>
+</a>
