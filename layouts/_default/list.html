@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="articles-by-tag">
-  <div class="tag-title">
-    <span class="category-label">Category</span>
-    <h1 class="title">{{ .Title | markdownify }}</h1>
+<div class="wide-page">
+  <div class="page-title">
+    <span class="label">Category</span>
+    <h1 class="title-content">{{ .Title | markdownify }}</h1>
   </div>
   <p>{{ .Params.subtitle | markdownify }}</p>
 
@@ -11,22 +11,7 @@
 
     {{with $firstPage}}
     <div class="pinned-article">
-      <div class="article-content">
-        <a href="{{ .RelPermalink }}">
-          <img src="/{{ .Params.image }}"
-               alt="{{ .Params.summary | markdownify }}"
-          />
-        </a>
-        <div class="information">
-          <h3 class="title"><a href="{{ .RelPermalink }}">
-            {{ .Title | markdownify }}
-          </a></h3>
-          <p class="description">{{ .Params.subtitle | markdownify }}</p>
-          <a class="read-article-link" href="{{ .RelPermalink }}">
-            Read article →
-          </a>
-        </div>
-      </div>
+      {{ partial "big-article-card.html" . }}
     </div>
     {{ end }}
 

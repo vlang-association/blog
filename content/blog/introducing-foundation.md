@@ -13,8 +13,8 @@ pinned: true
 
 WIP
 
-Hello, we,
-[Petr Makhnev](https://github.com/i582), and
+Hi, we,
+[Petr](https://github.com/i582), and
 [Mark aka walkingdevel](https://github.com/walkingdevel)
 from the V development team, announce the
 creation of the V Software Foundation.

@@ -7,7 +7,7 @@ authorname: Petr Makhnev
 authorlink: petr-makhnev
 categories: [ "Tutorials", "V and C" ]
 date: 2023-03-10T09:34:23+04:00
-image: images/default-image.png
+image: images/v-and-c/v-and-c.png
 ---
 
 Due to the fact that the main backend for V is C, it is very easy to use any libraries written in C.

@@ -1,4 +1,9 @@
 {{ define "main" }}
+
+{{ if eq .Params.Page "People" }}
+{{ partial "author-page.html" . }}
+{{ else }}
+
 <div class="article">
     <div class="article-header">
         <div class="article-header-wrapper">
@@ -100,4 +105,5 @@
         {{ end }} {{ end }}
     </div>
 </div>
+{{ end }}
 {{ end }}

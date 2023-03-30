@@ -1,0 +1,16 @@
+<div class="article-content">
+  <a href="{{ .RelPermalink }}">
+    <img src="/{{ .Params.image }}"
+         alt="{{ .Params.summary | markdownify }}"
+    />
+  </a>
+  <div class="information">
+    <h3 class="title"><a href="{{ .RelPermalink }}">
+      {{ .Title | markdownify }}
+    </a></h3>
+    <p class="description">{{ .Params.subtitle | markdownify }}</p>
+    <a class="read-article-link" href="{{ .RelPermalink }}">
+      Read article →
+    </a>
+  </div>
+</div>

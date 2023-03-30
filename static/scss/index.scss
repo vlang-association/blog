@@ -4,10 +4,11 @@
 @import "article-card";
 @import "footer";
 @import "article";
-@import "articles-by-tag";
 @import "404-page";
 @import "pre-code-blocks";
 @import "blockquote";
+@import "wide-page";
+@import "author-page";
 
 html {
   --title-color: var(--text-color);

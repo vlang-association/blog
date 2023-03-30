@@ -1,0 +1,36 @@
+<div class="wide-page author-page">
+    <div class="page-title">
+        <span class="label">Posts by</span>
+        <h1 class="title-content">{{ .Title | markdownify }}</h1>
+    </div>
+    <!--    <p>{{ .Content }}</p>-->
+
+    {{ $authorlink := .File.BaseFileName }}
+
+    <div class="author-description">
+        <div class="content">
+            {{ .Params.subtitle | markdownify }}
+        </div>
+
+        <div class="avatar">
+            <img src="/images/avatar/{{ $authorlink }}.png" alt="{{ .Params.authorname }} avatar">
+        </div>
+    </div>
+
+    <div class="posts-block">
+        <div class="pinned-article">
+            {{ range first 1 ( where .Site.Pages.ByPublishDate.Reverse "Params.authorlink" $authorlink )}}
+            {{ partial "big-article-card.html" . }}
+            {{ end }}
+        </div>
+
+        <div class="article-cards">
+
+            {{ range .Site.Pages.ByPublishDate.Reverse }}
+            {{ if eq .Params.authorlink $authorlink }}
+            {{ partial "article-card.html" . }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>

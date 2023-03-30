@@ -7,10 +7,10 @@ authorname: Petr Makhnev
 authorlink: petr-makhnev
 categories: [ "Tutorials", "V and C" ]
 date: 2023-03-17T09:34:23+04:00
-image: images/default-image.png
+image: images/v-and-c-2/v-and-c-2.png
 ---
 
-In the previous article, we looked at how to use functions from C code. Today we
+In the [previous article](/c-from-v-1), we looked at how to use functions from C code. Today we
 will look at C code.
 
 Last time, we created a static library from C code. However, V can also work
