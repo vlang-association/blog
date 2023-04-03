@@ -101,6 +101,10 @@ This component is already used in
 [Modules](https://modules.vlang.foundation/),
 and here, in blog.
 
+```v
+println('Hello from V playground component!')
+```
+
 TODO: Link to article with full description.
 
 ### Vings

@@ -60,6 +60,8 @@ html {
   --light-white: #f3f3f3;
   --white: #fff;
   --black: #000;
+  --blue: #3890fa;
+  --dark-blue: #0969da;
   --light-salat-green: #AFBF7E;
   --light-green: rgb(77, 187, 95);
   --dark-transparent-green: rgba(77, 187, 95, 0.2);
@@ -985,7 +987,7 @@ html[data-theme=dark] {
 }
 .article-card:hover {
   color: var(--text-color);
-  text-decoration: none;
+  text-decoration: none !important;
   border: 1px solid var(--article-card-hover-border-color) !important;
   box-shadow: none;
 }
@@ -1142,16 +1144,20 @@ footer .footer-container .footer-bottom .copyright-line {
 html {
   --article-title-color: var(--text-color);
   --article-text-color: var(--text-color);
+  --article-link-text-color: var(--dark-blue);
   --article-header-background-color: var(--white);
   --article-header-border-color: var(--divider-color);
+  --share-button-background-hover-color: var(--gray-f9);
   --category-gradient: linear-gradient(200deg, #4CF1FD -10%, #0176D1 98.3%);
 }
 
 html[data-theme=dark] {
   --article-title-color: var(--white);
   --article-text-color: var(--gray-e0);
+  --article-link-text-color: var(--blue);
   --article-header-background-color: var(--almost-black);
   --article-header-border-color: transparent;
+  --share-button-background-hover-color: var(--light-transparent-gray);
   --category-gradient: linear-gradient(261.61deg, #4CF1FD -0.81%, #0176D1 98.3%);
 }
 
@@ -1302,6 +1308,7 @@ html[data-theme=dark] {
   }
 }
 .article .article-content {
+  position: relative;
   max-width: 800px;
   margin: 250px auto 0;
 }
@@ -1310,7 +1317,35 @@ html[data-theme=dark] {
     margin: 200px 20px 0;
   }
 }
+.article .article-content .content-wrapper {
+  position: relative;
+}
+.article .article-content .share-buttons {
+  position: sticky;
+  top: 100px;
+  margin-left: -70px;
+}
+.article .article-content .share-buttons .share-button {
+  width: 35px;
+  height: 35px;
+  display: block;
+  padding: 6px 8px 8px 8px;
+  margin-top: 10px;
+  border: 1px solid var(--divider-color);
+  border-radius: 50%;
+}
+.article .article-content .share-buttons .share-button:hover {
+  background-color: var(--share-button-background-hover-color);
+}
+.article .article-content .share-buttons .share-button svg {
+  width: 100%;
+  height: 100%;
+}
+.article .article-content .share-buttons .share-button svg path {
+  fill: var(--text-color);
+}
 .article .article-content .content {
+  margin-top: -130px;
   margin-bottom: 80px;
 }
 @media (max-width: 1000px) {
@@ -1342,17 +1377,15 @@ html[data-theme=dark] {
   line-height: 1.5;
 }
 .article .article-content .content a {
-  color: var(--article-text-color);
+  color: var(--article-link-text-color);
   text-decoration: none;
-  border-bottom: 1px solid var(--text-color);
   transition: border-bottom-width 0.15s ease-in-out;
 }
 .article .article-content .content a:visited {
   color: var(--text-color);
 }
 .article .article-content .content a:hover {
-  text-decoration: none;
-  border-bottom: 2px solid var(--text-color);
+  text-decoration: underline;
 }
 .article .article-content .content :not(pre) > code {
   font-family: "JetBrains Mono", monospace;

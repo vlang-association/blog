@@ -115,7 +115,7 @@ html[data-theme="dark"] {
 
   &:hover {
     color: var(--text-color);
-    text-decoration: none;
+    text-decoration: none !important;
 
     border: 1px solid var(--article-card-hover-border-color) !important;
     box-shadow: none;
