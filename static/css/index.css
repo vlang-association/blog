@@ -1321,6 +1321,7 @@ html[data-theme=dark] {
   position: relative;
 }
 .article .article-content .share-buttons {
+  width: max-content;
   position: sticky;
   top: 100px;
   margin-left: -70px;
@@ -1401,7 +1402,7 @@ html[data-theme=dark] {
   transition: border-bottom-width 0.15s ease-in-out;
 }
 .article .article-content .content a:visited {
-  color: var(--text-color);
+  color: var(--article-link-text-color);
 }
 .article .article-content .content a:hover {
   text-decoration: underline;

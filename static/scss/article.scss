@@ -200,6 +200,7 @@ html[data-theme="dark"] {
     }
 
     .share-buttons {
+      width: max-content;
       position: sticky;
       top: 100px;
       margin-left: -70px;
@@ -292,7 +293,7 @@ html[data-theme="dark"] {
         transition: border-bottom-width .15s ease-in-out;
 
         &:visited {
-          color: var(--text-color);
+          color: var(--article-link-text-color);
         }
 
         &:hover {
