@@ -61,12 +61,14 @@ We have revised most of the documentation articles and placed them in a convenie
 [docs.vlang.foundation](https://docs.vlang.foundation).
 We added new articles to the already existing parts of the documentation to cover more features of
 the language.
-As a result, the documentation has grown by about 50% compared to the original.
+As a result, the documentation has grown by about **50%** compared to the original.
 
 The site has a search so that anyone can find the information they need, the search is
 tolerant of small errors, which will also help to find information easier.
 
-TODO: Link to article with full description.
+Learn more in this article:
+
+{{< article-link link="/meet-new-documentation.md" >}}
 
 ### Modules API website
 

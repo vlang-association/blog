@@ -93,7 +93,7 @@ html[data-theme="dark"] {
 
 .article-card {
   width: 300px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color) !important;
   border-radius: 8px;
   padding: 10px 15px 20px;
   text-decoration: none;
@@ -103,7 +103,7 @@ html[data-theme="dark"] {
   display: grid;
   grid-template-rows: max-content max-content max-content auto max-content max-content;
 
-  transition: border .25s;
+  transition: border .25s !important;
 
   @media (max-width: 680px) {
     width: 100%;
@@ -117,7 +117,8 @@ html[data-theme="dark"] {
     color: var(--text-color);
     text-decoration: none;
 
-    border: 1px solid var(--article-card-hover-border-color);
+    border: 1px solid var(--article-card-hover-border-color) !important;
+    box-shadow: none;
   }
 
   &.pinned {
@@ -150,15 +151,14 @@ html[data-theme="dark"] {
   }
 
   .date {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-    font-size: 13px;
+    margin: 7px 0 5px !important;
+    color: var(--secondary-color) !important;
+    font-size: 13px !important;
     font-family: "JetBrains Mono", monospace;
   }
 
   .title {
-    margin-top: 0;
+    margin-top: 0 !important;
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 1.4;
@@ -171,14 +171,12 @@ html[data-theme="dark"] {
   }
 
   .description {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin: 0 0 10px !important;
+    font-size: 15px !important;
     font-weight: 300;
-    line-height: 1.4;
+    line-height: 1.4 !important;
     color: var(--secondary-color);
   }
-
 
   .author {
     display: grid;
@@ -186,9 +184,8 @@ html[data-theme="dark"] {
     grid-column-gap: 2px;
     align-items: center;
 
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 13px;
+    margin: 10px 0 0 !important;
+    font-size: 13px !important;
     color: var(--secondary-color);
     height: max-content;
 
