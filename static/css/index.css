@@ -1074,7 +1074,7 @@ footer.underline {
 }
 @media (max-width: 1000px) {
   footer {
-    padding: 40px 30px 50px;
+    padding: 40px 20px 50px;
   }
 }
 footer .footer-container {
@@ -1707,7 +1707,7 @@ body {
 }
 @media (max-width: 1000px) {
   .horizontal {
-    padding: 50px 30px;
+    padding: 50px 20px;
   }
 }
 .horizontal .articles {
