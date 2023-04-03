@@ -109,7 +109,7 @@ html[data-theme="dark"] {
         padding-bottom: 20px;
 
         @media (max-width: 1000px) {
-          margin-bottom: 70px;
+          margin-bottom: 50px;
         }
 
         .date {
@@ -204,6 +204,18 @@ html[data-theme="dark"] {
       top: 100px;
       margin-left: -70px;
 
+      @media (max-width: 1000px) {
+        position: relative;
+        top: 0;
+
+        margin-left: 0;
+        margin-bottom: 25px;
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+      }
+
       .share-button {
         width: 35px;
         height: 35px;
@@ -214,6 +226,12 @@ html[data-theme="dark"] {
 
         border: 1px solid var(--divider-color);
         border-radius: 50%;
+
+        @media (max-width: 1000px) {
+          width: 45px;
+          height: 45px;
+          padding: 10px 11px 11px 11px;
+        }
 
         &:hover {
           background-color: var(--share-button-background-hover-color);
@@ -235,6 +253,7 @@ html[data-theme="dark"] {
       margin-bottom: 80px;
 
       @media (max-width: 1000px) {
+        margin-top: 0;
         margin-bottom: 30px;
       }
 

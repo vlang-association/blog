@@ -1245,7 +1245,7 @@ html[data-theme=dark] {
 }
 @media (max-width: 1000px) {
   .article .article-header .article-header-wrapper .details {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
 .article .article-header .article-header-wrapper .details .date {
@@ -1325,6 +1325,17 @@ html[data-theme=dark] {
   top: 100px;
   margin-left: -70px;
 }
+@media (max-width: 1000px) {
+  .article .article-content .share-buttons {
+    position: relative;
+    top: 0;
+    margin-left: 0;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+  }
+}
 .article .article-content .share-buttons .share-button {
   width: 35px;
   height: 35px;
@@ -1333,6 +1344,13 @@ html[data-theme=dark] {
   margin-top: 10px;
   border: 1px solid var(--divider-color);
   border-radius: 50%;
+}
+@media (max-width: 1000px) {
+  .article .article-content .share-buttons .share-button {
+    width: 45px;
+    height: 45px;
+    padding: 10px 11px 11px 11px;
+  }
 }
 .article .article-content .share-buttons .share-button:hover {
   background-color: var(--share-button-background-hover-color);
@@ -1350,6 +1368,7 @@ html[data-theme=dark] {
 }
 @media (max-width: 1000px) {
   .article .article-content .content {
+    margin-top: 0;
     margin-bottom: 30px;
   }
 }
