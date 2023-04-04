@@ -104,8 +104,9 @@ and here, in blog.
 ```v
 fn main() {
 	areas := ['game', 'web', 'tools', 'science', 'systems',
-	'embedded', 'drivers', 'GUI', 'mobile']
-	for area in areas {
+	          'embedded', 'drivers', 'GUI', 'mobile']
+	
+    for area in areas {
 		println('Hello, ${area} developers!')
 	}
 }
