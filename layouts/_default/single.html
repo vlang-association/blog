@@ -1,133 +1,141 @@
 {{ define "main" }}
 
-{{ if eq .Params.Page "People" }}
-{{ partial "author-page.html" . }}
-{{ else }}
+    {{ if eq .Params.Page "People" }}
+        {{ partial "author-page.html" . }}
+    {{ else }}
+        <div class="article" itemscope itemtype="http://schema.org/Article">
+            <div class="article-header">
+                <div class="article-header-wrapper">
+                    <div class="categories">
+                        <ul>
+                            {{ with .Params.categories }} {{ range . }}
+                                {{ $href := print (absURL "categories/") (urlize .) }}
+                                <li>
+                                    <a class="category {{ .}}" href="{{ $href }}/">
+                                        {{ . }}
+                                    </a>
+                                </li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
 
-<div class="article">
-    <div class="article-header">
-        <div class="article-header-wrapper">
-            <div class="categories">
-                <ul>
-                    {{ with .Params.categories }} {{ range . }}
-                    {{ $href := print (absURL "categories/") (urlize .) }}
-                    <li>
-                        <a class="category {{ .}}" href="{{ $href }}/">
-                            {{ . }}
-                        </a>
-                    </li>
+                    <h1 class="title" itemprop="headline">{{ .Title | markdownify }}</h1>
+
+                    {{ if ne .Params.Page "People" }}
+                        <div class="article-description">
+                            {{ .Params.subtitle | markdownify }}
+                        </div>
+
+                        <div class="article-image">
+                            {{ if .Params.image }}
+                                <img src="/{{ .Params.image }}" alt="{{ .Params.summary | markdownify }}"
+                                     itemprop="image">
+                            {{ end }}
+                        </div>
+
+                        <div class="details">
+                            <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span class="avatar">
+                                    <img src="/images/avatar/{{ .Params.authorlink }}.png"
+                                         alt="{{ .Params.authorname }} avatar"
+                                         itemprop="image">
+                                </span>
+                                <a href="/people/{{ .Params.authorlink }}" itemprop="url">
+                                    <span itemprop="name">
+                                        {{ .Params.authorname }}
+                                    </span>
+                                </a>
+                            </p>
+
+                            {{ $dateTime := .Params.date.Format "2006-01-02" }}
+                            {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
+                            <div class="date">
+                                <time datetime="{{ $dateTime }}" itemprop="datePublished">
+                                    {{ .Params.date.Format $dateFormat }}
+                                </time>
+                            </div>
+                        </div>
                     {{ end }}
-                    {{ end }}
-                </ul>
-            </div>
-
-            <h1 class="title">{{ .Title | markdownify }}</h1>
-
-            {{ if ne .Params.Page "People" }}
-            <div class="article-description">
-                {{ .Params.subtitle | markdownify }}
-            </div>
-
-            <div class="article-image">
-                {{ if .Params.image }}
-                <img src="/{{ .Params.image }}" alt="{{ .Params.summary | markdownify }}">
-                {{ end }}
-            </div>
-
-            <div class="details">
-                <p class="author">
-                    <span class="avatar">
-                        <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
-                    </span>
-                    <a href="/people/{{ .Params.authorlink }}">
-                        {{ .Params.authorname }}
-                    </a>
-                </p>
-
-                <!-- We add the date of publication -->
-                {{ $dateTime := .Params.date.Format "2006-01-02" }}
-                <!-- The dateformat is always generated against 2006/01/02 -->
-                {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
-                <div class="date">
-                    <time datetime="{{ $dateTime }}">
-                        {{ .Params.date.Format $dateFormat }}
-                    </time>
                 </div>
             </div>
-            {{ end }}
-        </div>
-    </div>
 
-    <div class="article-content">
-        <div class="content-wrapper">
-            <div class="share-buttons">
-                {{ $title := .Title }}
-                {{ $url := printf "%s" .Page.Permalink | absLangURL }}
+            <div class="article-content" itemprop="articleBody">
+                <div class="content-wrapper">
+                    <div class="share-buttons">
+                        {{ $title := .Title }}
+                        {{ $url := printf "%s" .Page.Permalink | absLangURL }}
 
-                <a href="https://twitter.com/share?url={{ $url }}&text={{ $title }}" target="_blank" class="share-button" aria-label="Share on Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3" height="18">
-                        <path d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1" fill="currentColor"></path>
-                    </svg>
-                </a>
+                        <a href="https://twitter.com/share?url={{ $url }}&text={{ $title }}" target="_blank"
+                           class="share-button" aria-label="Share on Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3" height="18">
+                                <path d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1"
+                                      fill="currentColor"></path>
+                            </svg>
+                        </a>
 
-                <a href="http://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" class="share-button" aria-label="Share on Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.3 15.4" height="18">
-                        <path d="M14.5 0H.8a.88.88 0 0 0-.8.9v13.6a.88.88 0 0 0 .8.9h7.3v-6h-2V7.1h2V5.4a2.87 2.87 0 0 1 2.5-3.1h.5a10.87 10.87 0 0 1 1.8.1v2.1h-1.3c-1 0-1.1.5-1.1 1.1v1.5h2.3l-.3 2.3h-2v5.9h3.9a.88.88 0 0 0 .9-.8V.8a.86.86 0 0 0-.8-.8z" fill="currentColor"></path>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/shareArticle?url={{ $url }}&title={{ $title }}" class="share-button" target="_blank" aria-label="Share om LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" height="18">
-                        <path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z" fill="currentColor"></path>
-                    </svg>
-                </a>
+                        <a href="http://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" class="share-button"
+                           aria-label="Share on Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.3 15.4" height="18">
+                                <path d="M14.5 0H.8a.88.88 0 0 0-.8.9v13.6a.88.88 0 0 0 .8.9h7.3v-6h-2V7.1h2V5.4a2.87 2.87 0 0 1 2.5-3.1h.5a10.87 10.87 0 0 1 1.8.1v2.1h-1.3c-1 0-1.1.5-1.1 1.1v1.5h2.3l-.3 2.3h-2v5.9h3.9a.88.88 0 0 0 .9-.8V.8a.86.86 0 0 0-.8-.8z"
+                                      fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?url={{ $url }}&title={{ $title }}"
+                           class="share-button" target="_blank" aria-label="Share om LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" height="18">
+                                <path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"
+                                      fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    {{ $authorlink := .File.BaseFileName }}
+                    <div class="content">
+                        {{ .Content }}
+                    </div>
+                </div>
+
+                <!-- Append list of posts by author if necessary -->
+                {{ if eq .Params.Page "People" }}
+                    <h1>Posts by {{ .Title | markdownify }}</h1>
+
+                    <div class="article-cards">
+                        {{ range .Site.Pages.ByPublishDate.Reverse }}
+                            <!-- Iterate over all top level pages -->
+                            {{ if eq .Params.Page "Blog" }}
+                                <!-- We are interested only in the blog posts -->
+                                <!-- Process latest posts first -->
+                                {{ if eq .Params.authorlink $authorlink }}
+                                    {{ partial "article-card.html" . }}
+                                {{ end }} {{ end }} {{ end }}
+                    </div>
+                {{ end }}
+                {{ if .Params.authorname }}
+
+                    {{ if eq .Params.Page "Blog" }}
+                        <div class="giscus"></div>
+                        <script
+                                src="https://giscus.app/client.js"
+                                data-repo="vlang/vlang-blog"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnk0MDc5NjgwNDQ="
+                                data-category="General"
+                                data-category-id="DIC_kwDOGFEZLM4B_ojp"
+                                data-mapping="title"
+                                data-reactions-enabled="0"
+                                data-emit-metadata="0"
+                                data-theme="light"
+                                data-lang="en"
+                                crossorigin="anonymous"
+                                async
+                        ></script>
+                        <script>
+                            setTimeout(() => {
+                                changeGiscusTheme(currentTheme)
+                            }, 3000)
+                        </script>
+                    {{ end }} {{ end }}
             </div>
-
-            {{ $authorlink := .File.BaseFileName }}
-            <div class="content">
-                {{ .Content }}
-            </div>
         </div>
-
-        <!-- Append list of posts by author if necessary -->
-        {{ if eq .Params.Page "People" }}
-        <h1>Posts by {{ .Title | markdownify }}</h1>
-
-        <div class="article-cards">
-            {{ range .Site.Pages.ByPublishDate.Reverse }}
-            <!-- Iterate over all top level pages -->
-            {{ if eq .Params.Page "Blog" }}
-            <!-- We are interested only in the blog posts -->
-            <!-- Process latest posts first -->
-            {{ if eq .Params.authorlink $authorlink }}
-            {{ partial "article-card.html" . }}
-            {{ end }} {{ end }} {{ end }}
-        </div>
-        {{ end }}
-        {{ if .Params.authorname }}
-
-        {{ if eq .Params.Page "Blog" }}
-        <div class="giscus"></div>
-        <script
-                src="https://giscus.app/client.js"
-                data-repo="vlang/vlang-blog"
-                data-repo-id="MDEwOlJlcG9zaXRvcnk0MDc5NjgwNDQ="
-                data-category="General"
-                data-category-id="DIC_kwDOGFEZLM4B_ojp"
-                data-mapping="title"
-                data-reactions-enabled="0"
-                data-emit-metadata="0"
-                data-theme="light"
-                data-lang="en"
-                crossorigin="anonymous"
-                async
-        ></script>
-        <script>
-            setTimeout(() => {
-                changeGiscusTheme(currentTheme)
-            }, 3000)
-        </script>
-        {{ end }} {{ end }}
-    </div>
-</div>
-{{ end }}
+    {{ end }}
 {{ end }}

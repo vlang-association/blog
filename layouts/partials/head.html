@@ -3,17 +3,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>{{ .Title | markdownify }} | V Foundation</title>
-
     <script type="text/javascript" src="/js/theme.js"></script>
 
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/vlang-playground.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"/>
 
+    <!-- Preload -->
+    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Regular.woff2"
+          as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Medium.woff2"
+          as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Bold.woff2"
+          as="font" type="font/woff2" crossorigin>
+
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <!-- End Preload -->
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://vlang.foundation/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://vlang.foundation/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://vlang.foundation/images/favicon-16x16.png">
     <link rel="manifest" href="https://vlang.foundation/images/site.webmanifest">
     <link rel="icon" type="image/x-icon" href="https://vlang.foundation/images/favicon.ico">
+    <!-- End Favicons -->
+
+    {{ $title := "V Blog" }}
+    {{ $description := "Blog about V programming language" }}
+    {{ $image := "/images/open-graph/blog-cover.png" }}
+    {{ $url := "https://blog.vlang.foundation/" }}
+    {{ if eq .Params.Page "Blog" }}
+        {{ $title = .Title }}
+        {{ $description = .Params.subtitle }}
+        {{ $url = .Page.Permalink }}
+
+        {{ if .Params.image }}
+            {{ $image = add "/" .Params.image }}
+        {{ end }}
+    {{ end }}
+
+    {{ if eq .Params.Page "People" }}
+        {{ $authorlink := .File.BaseFileName }}
+
+        {{ $title = add "Posts by " .Title }}
+        {{ $description = .Params.subtitle }}
+        {{ $url = .Page.Permalink }}
+
+        {{ $image = add (add "/images/avatar/" $authorlink) ".png" }}
+    {{ end }}
+
+    {{ if .IsNode }}
+        {{ $title = add "Category " .Title }}
+        {{ $description = add (add "All articles with " .Title) "tag" }}
+        {{ $url = .Page.Permalink }}
+    {{ end }}
+
+    <!-- Open Graph-->
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:image" content="{{ $image }}">
+    <meta property="og:site_name" content="V Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="{{ $url }}">
+    <!-- End Open Graph -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@vsf">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:creator" content="@vlang-foundation">
+    <meta name="twitter:image:src" content="{{ $image }}">
+    <!-- End Twitter Card -->
+
+    <!-- Schema.org WebPage -->
+    <script type="application/ld+json"> {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "@id": "{{ $url }}/#webpage",
+            "url": "{{ $url }}",
+            "name": "{{ $title }}",
+            "description": "{{ $description }}",
+            "image": "{{ $image }}",
+            "inLanguage": "en-US"
+    }</script>
+    <!-- End Schema.org -->
+
+    <!-- Schema.org WebSite -->
+    <script type="application/ld+json"> {
+            "@type": "WebSite",
+            "@id": "https://blog.vlang.foundation/#website",
+            "url": "https://blog.vlang.foundation/",
+            "name": "V Blog"
+    }</script>
+    <!-- End Schema.org -->
+
+    <title>{{ .Title | markdownify }} | V Foundation</title>
 </head>

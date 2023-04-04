@@ -33,6 +33,10 @@ html[data-theme="dark"] {
       margin-bottom: 20px;
 
       color: var(--article-by-tag-title-color);
+
+      @media (max-width: 1000px) {
+        font-size: 40px;
+      }
     }
   }
 

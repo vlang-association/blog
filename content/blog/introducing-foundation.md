@@ -102,7 +102,13 @@ This component is already used in
 and here, in blog.
 
 ```v
-println('Hello from V playground component!')
+fn main() {
+	areas := ['game', 'web', 'tools', 'science', 'systems',
+	'embedded', 'drivers', 'GUI', 'mobile']
+	for area in areas {
+		println('Hello, ${area} developers!')
+	}
+}
 ```
 
 TODO: Link to article with full description.
