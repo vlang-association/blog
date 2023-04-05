@@ -238,7 +238,7 @@ used to create third-party tools.
 There is still a lot of work to improve ORM.
 Now the ORM functionality covers only the basic needs for performing CRUD tasks,
 but all of them do not go beyond pet-projects.
-And there is functionality that the community has been waiting for for a long time. For example, the operators `like` and `in`.
+And there is functionality that the community has been waiting for a long time. For example, the operators `like` and `in`.
 
 Based on the existing problems and user wishes, we have built the following roadmap for ORM:
 
