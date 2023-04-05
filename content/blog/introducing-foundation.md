@@ -243,7 +243,7 @@ And there is functionality that the community has been waiting for a long time. 
 Based on the existing problems and user wishes, we have built the following roadmap for ORM:
 
 - Support for structures that do not have an `id` field
-- Support for optional fields for structures and `NULL`
+- Support for optional fields for structures and `NULL`s
 - The `like` operator
 - The `in` operator
 - Full documentation for ORM
