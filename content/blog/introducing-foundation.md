@@ -27,7 +27,7 @@ development and advertising of the language.
 However, one person does not always keep track of all aspects of the development and spread of a
 language.
 
-# Founding
+# Funding
 
 The development of almost any open source project is **very dependent on sponsors**.
 From their financial support, the project can receive the necessary resources for development.
@@ -48,7 +48,7 @@ Unlike the development of the language itself, the Foundation **respects deadlin
 that deadlines help to make the evolution of the language/ecosystem transparent.
 Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
 it is not critical if this phenomenon does not become permanent.
-The Foundation will notify the community of any postponements, if any.
+The Foundation **will notify** the community of any postponements, if any.
 
 ## What Foundation has done already
 
@@ -80,7 +80,8 @@ that shows all the modules of the standard library along with a search for them,
 simplifies the search for the right one.
 
 TODO: WIP
-TODO: Link to article with full description.
+
+{{< article-link link="/meet-modules-platform.md" >}}
 
 ### Playground
 
@@ -112,7 +113,7 @@ fn main() {
 }
 ```
 
-TODO: Link to article with full description.
+{{< article-link link="/meet-updated-playground.md" >}}
 
 ### Vings
 
@@ -120,7 +121,7 @@ Vings is a platform for learning V through solving small problems.
 On it, anyone can start learning V through solving problems, each of which will link to the
 documentation about a current topic.
 
-TODO: Link to article with full description.
+{{< article-link link="/meet-vings-platform.md" >}}
 
 ### Blog
 
@@ -129,7 +130,6 @@ event announcements.
 
 We have created a blog where we will post news about V so that users can get new
 information quickly.
-
 We will also be posting tutorials there that will tell users how to do something in V.
 
 ### IntelliJ V
@@ -138,6 +138,17 @@ The JetBrains IDE plugin is now also part of the Foundation and will be further 
 officially.
 The plugin is currently the best solution for V development and provides the widest
 feature set.
+
+{{< rawhtml >}}
+
+<figure>
+<img
+src="/images/why-we-need-foundation/intellij-v.png"
+alt="Screenshot showing the IntelliJ V">
+<figcaption>IntelliJ V</figcaption>
+</figure>
+
+{{< /rawhtml >}}
 
 ### ORM
 
@@ -167,8 +178,30 @@ capabilities of the V code.
 Now, for many built-in V types, debuggers show a raw form that is difficult or impossible to work
 with.
 
+{{< rawhtml >}}
+
+<figure>
+<img
+src="/images/why-we-need-foundation/raw-debugger-view.png"
+alt="Screenshot showing the debugger raw values for V array type">
+<figcaption>Current V array representation in debugger</figcaption>
+</figure>
+
+{{< /rawhtml >}}
+
 We plan to make their display at approximately the same level as they are already done in the plugin
 for JetBrains IDE.
+
+{{< rawhtml >}}
+
+<figure>
+<img
+src="/images/why-we-need-foundation/idea-debugger-view.png"
+alt="Screenshot showing the debugger inside IntelliJ V plugin">
+<figcaption>Types view in IntelliJ V plugin</figcaption>
+</figure>
+
+{{< /rawhtml >}}
 
 ### Language Grammar Formalization
 
@@ -177,6 +210,17 @@ The goal is to make a compiler according to all the canons of the industry, taki
 the mistakes made earlier.
 One step is to formalize the grammar so that it can be represented as a formalized description in
 EBNF format.
+
+{{< rawhtml >}}
+
+<figure>
+<img
+src="/images/why-we-need-foundation/ebnf-example.png"
+alt="Screenshot showing the EBNF grammar for Golang">
+<figcaption>EBNF grammar of Golang</figcaption>
+</figure>
+
+{{< /rawhtml >}}
 
 In parallel with the development of the two things above, we will continue to formalize the grammar,
 which will result in a page in the documentation with a complete grammar of the language that can be
