@@ -152,7 +152,14 @@ alt="Screenshot showing the IntelliJ V">
 
 ### ORM
 
-TODO: часть бессмертного комара
+One of the main parts of modern web development is working with a database.
+In V, the tool for high-level interactions with the database is ORM.
+But while ORM gave good abstractions, it didn't provide good type checks and security.
+
+We have written a type check for all parts of ORM query expressions,
+added a check for expressions that do not make sense at runtime,
+and improved the typing of attributes for relationships between tables.
+The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 
 ## Plans
 
@@ -228,4 +235,18 @@ used to create third-party tools.
 
 ### Continue improving ORM
 
-TODO: часть бессмертного комара
+There is still a lot of work to improve ORM.
+Now the ORM functionality covers only the basic needs for performing CRUD tasks,
+but all of them do not go beyond pet-projects.
+And there is functionality that the community has been waiting for for a long time. For example, the operators `like` and `in`.
+
+Based on the existing problems and user wishes, we have built the following roadmap for ORM:
+
+- Support for structures that do not have an `id` field
+- Support for optional fields for structures and `NULL`
+- The `like` operator
+- The `in` operator
+- Full documentation for ORM
+- Improved support for low-level libraries for working with databases
+- Test and CI coverage for SQLite, PostgreSQL, MySQL, MSSQL
+- The ability for users to expand the functionality of ORM independently
