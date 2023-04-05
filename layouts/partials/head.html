@@ -52,9 +52,10 @@
     {{ end }}
 
     {{ if .IsNode }}
-        {{ $title = add "Category " .Title }}
-        {{ $description = add (add "All articles with " .Title) "tag" }}
-        {{ $url = .Page.Permalink }}
+        {{if not (eq .Title "Blog") }}
+            {{ $title = add "Category " .Title }}
+            {{ $description = add (add "All articles with " .Title) " tag" }}
+        {{ end }}
     {{ end }}
 
     <!-- Open Graph-->
@@ -86,16 +87,18 @@
             "description": "{{ $description }}",
             "image": "{{ $image }}",
             "inLanguage": "en-US"
-    }</script>
+    }
+    </script>
     <!-- End Schema.org -->
 
     <!-- Schema.org WebSite -->
     <script type="application/ld+json"> {
-            "@type": "WebSite",
-            "@id": "https://blog.vlang.foundation/#website",
-            "url": "https://blog.vlang.foundation/",
-            "name": "V Blog"
-    }</script>
+        "@type": "WebSite",
+        "@id": "https://blog.vlang.foundation/#website",
+        "url": "https://blog.vlang.foundation/",
+        "name": "V Blog"
+    }
+    </script>
     <!-- End Schema.org -->
 
     <title>{{ .Title | markdownify }} | V Foundation</title>

@@ -314,7 +314,8 @@ html[data-theme="dark"] {
         font-size: 0.875em;
       }
 
-      .v-code {
+      .v-code, .c-code {
+        margin-top: -10px;
         margin-bottom: 30px;
 
         .playground__wrapper {

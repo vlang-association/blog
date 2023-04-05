@@ -97,6 +97,7 @@ header {
   z-index: 997;
   font: 400 14px/1.5 "JetBrainsSans", Helvetica, Arial, sans-serif;
 
+  border-bottom: 1px solid var(--header-background-color);
   background: var(--header-background-color);
 
   @media (max-width: 1000px) {
@@ -143,6 +144,11 @@ header {
         font-size: 17px;
         font-weight: 500;
         color: var(--text-color);
+      }
+
+      .separator {
+        margin-left: 2px;
+        margin-right: 7px;
       }
 
       img {
@@ -240,11 +246,13 @@ header {
     }
 
     ul {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(6, max-content);
       list-style: none;
       padding: 0;
       margin: 2px 0 0 0;
       justify-self: end;
+      align-items: center;
     }
 
     ul.main-header-list {
@@ -286,10 +294,6 @@ header {
         svg {
           width: 18px;
           height: 18px;
-
-          &.sun {
-            margin-top: 2px;
-          }
 
           path {
             fill: var(--text-color);
@@ -714,7 +718,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
     .search-results {
       height: 100%;
       max-height: 483px;
-      overflow: scroll;
+      overflow-y: scroll;
 
       display: grid;
 

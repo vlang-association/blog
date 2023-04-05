@@ -20,16 +20,15 @@
     <div class="posts-block">
         <div class="pinned-article">
             {{ range first 1 ( where .Site.Pages.ByPublishDate.Reverse "Params.authorlink" $authorlink )}}
-            {{ partial "big-article-card.html" . }}
+                {{ partial "big-article-card.html" . }}
             {{ end }}
         </div>
 
         <div class="article-cards">
-
             {{ range .Site.Pages.ByPublishDate.Reverse }}
-            {{ if eq .Params.authorlink $authorlink }}
-            {{ partial "article-card.html" . }}
-            {{ end }}
+                {{ if eq .Params.authorlink $authorlink }}
+                    {{ partial "article-card.html" . }}
+                {{ end }}
             {{ end }}
         </div>
     </div>

@@ -9,9 +9,9 @@
 <div class="horizontal">
     <div class="pinned-article">
         {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
-        {{ if .Params.pinned }}
-        {{ partial "big-article-card.html" . }}
-        {{ end }}
+            {{ if .Params.pinned }}
+                {{ partial "big-article-card.html" . }}
+            {{ end }}
         {{ end }}
     </div>
 
@@ -21,10 +21,10 @@
                 <h2>Latest</h2>
                 <div class="article-cards">
                     {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
-                    <!-- Select the blog posts only -->
-                    {{ if eq .Params.Page "Blog" }}
-                    {{ partial "article-card.html" . }}
-                    {{ end }}
+                        <!-- Select the blog posts only -->
+                        {{ if eq .Params.Page "Blog" }}
+                            {{ partial "article-card.html" . }}
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>
@@ -35,9 +35,9 @@
                 </h2>
                 <div class="article-cards">
                     {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
-                    {{ if in .Params.categories "Announcements" }}
-                    {{ partial "article-card.html" . }}
-                    {{ end }}
+                        {{ if in .Params.categories "Announcements" }}
+                            {{ partial "article-card.html" . }}
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>
@@ -48,9 +48,9 @@
                 </h2>
                 <div class="article-cards">
                     {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
-                    {{ if in .Params.categories "Tutorials" }}
-                    {{ partial "article-card.html" . }}
-                    {{ end }}
+                        {{ if in .Params.categories "Tutorials" }}
+                            {{ partial "article-card.html" . }}
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>

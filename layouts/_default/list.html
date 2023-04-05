@@ -1,23 +1,23 @@
 {{ define "main" }}
-<div class="wide-page">
-  <div class="page-title">
-    <span class="label">Category</span>
-    <h1 class="title-content">{{ .Title | markdownify }}</h1>
-  </div>
-  <p>{{ .Params.subtitle | markdownify }}</p>
+    <div class="wide-page">
+        <div class="page-title">
+            <span class="label">Category</span>
+            <h1 class="title-content">{{ .Title | markdownify }}</h1>
+        </div>
+        <p>{{ .Params.subtitle | markdownify }}</p>
 
-  <div class="article-cards">
-    {{$firstPage := index (.Pages.ByPublishDate.Reverse) 0}}
+        <div class="article-cards">
+            {{$firstPage := index (.Pages.ByPublishDate.Reverse) 0}}
 
-    {{with $firstPage}}
-    <div class="pinned-article">
-      {{ partial "big-article-card.html" . }}
+            {{with $firstPage}}
+                <div class="pinned-article">
+                    {{ partial "big-article-card.html" . }}
+                </div>
+            {{ end }}
+
+            {{ range (.Paginate .Pages.ByPublishDate.Reverse).Pages }}
+                {{ partial "article-card.html" . }}
+            {{ end }}
+        </div>
     </div>
-    {{ end }}
-
-    {{ range (.Paginate .Pages.ByPublishDate.Reverse).Pages }}
-    {{ partial "article-card.html" . }}
-    {{ end }}
-  </div>
-</div>
 {{ end }}

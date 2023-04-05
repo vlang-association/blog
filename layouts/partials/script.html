@@ -7,7 +7,7 @@
     const theme = localStorage.getItem("theme");
 
     document.addEventListener('DOMContentLoaded', () => {
-        const playgroundElements = [...document.querySelectorAll(".v-code")];
+        const playgroundElements = [...document.querySelectorAll(".v-code"), ...document.querySelectorAll(".c-code")];
         playgroundElements.forEach(playgroundElement => {
             const playground = Playground.create(playgroundElement, {
                 fontSize: "14px",

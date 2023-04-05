@@ -10,6 +10,7 @@ date: 2023-03-10T09:34:23+04:00
 image: images/v-and-c/v-and-c.png
 ---
 
+In this series of articles, we will talk about how to use C code in V.
 Due to the fact that the main backend for V is C, it is very easy to use any libraries written in C.
 
 ## Preparation
@@ -46,7 +47,7 @@ int fib(int number);
 
 Let's compile it into a static library:
 
-```c
+```bash
 cd ./c
 clang -c -o fib.o fib.c -fPIC
 ar r libfib.a fib.o
@@ -166,3 +167,6 @@ Output:
 55
 ```
 
+On this we are done with the first part.
+
+In the [next article](/c-from-v-2.md), we'll take a look at what the generated C code looks like.
