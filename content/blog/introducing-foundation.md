@@ -248,5 +248,6 @@ Based on the existing problems and user wishes, we have built the following road
 - The `in` operator
 - Full documentation for ORM
 - Improved support for low-level libraries for working with databases
+- Support for migrations
 - Test and CI coverage for SQLite, PostgreSQL, MySQL, MSSQL
 - The ability for users to expand the functionality of ORM independently
