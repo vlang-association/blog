@@ -4,7 +4,10 @@
   "description": "Source code for V Foundation Blog",
   "scripts": {
     "sass-watch": "sass --watch static/scss/index.scss:static/css/index.css",
+    "sass-build": "sass static/scss/index.scss:static/css/index.css",
     "hugo-watch": "hugo serve",
+    "hugo-build": "hugo",
+    "build": "npm run sass-build && npm run hugo-build",
     "clean": "rm -rf public"
   },
   "author": "Petr Makhnev",
@@ -13,6 +16,7 @@
   },
   "homepage": "https://vlang.foundation/",
   "dependencies": {
+    "hugo-bin": "~0.102.0",
     "sass": "^1.41.1",
     "typescript": "^4.4.3"
   }
