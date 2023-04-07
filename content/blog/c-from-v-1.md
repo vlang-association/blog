@@ -95,7 +95,7 @@ module fib
 fn C.fib(num int) int
 ```
 
-This declaration tells the compiler that the function will be obtained from outside sources. 
+This declaration tells the compiler that the function will be obtained from outside sources.
 In fact, this is equivalent to the pre-definition of a function in C.
 
 Now we need to tell the V compiler where to look for the function definition.
@@ -157,7 +157,7 @@ fn main() {
 
 Compile and run:
 
-```
+```shell
 v run .
 ```
 
