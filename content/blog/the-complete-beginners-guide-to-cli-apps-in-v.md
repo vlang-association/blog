@@ -782,7 +782,7 @@ xxxxxxx
 
 ```
 
-> ` v run .`
+> `v run .`
 
 ```text
 Enter a shape: right-triangle
