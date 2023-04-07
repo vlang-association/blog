@@ -20,14 +20,14 @@ creation of the V Software Foundation.
 The Foundation is a **non-profit organization** that is dedicated to the development of the V
 language.
 
-# Prelude
+## Prelude
 
 For a long time, V has been developing independently; **one person** makes decisions on the
 development and advertising of the language.
 However, one person does not always keep track of all aspects of the development and spread of a
 language.
 
-# Funding
+## Funding
 
 The development of almost any open source project is **very dependent on sponsors**.
 From their financial support, the project can receive the necessary resources for development.
@@ -39,19 +39,19 @@ The V Software Foundation is registered on the
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
 
-# Deadlines
+## Deadlines
 
 We believe that deadlines help to make the evolution of the language/ecosystem transparent.
 Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
 it is not critical if this phenomenon does not become permanent.
 The Foundation **will notify** the community of any postponements, if any.
 
-## What Foundation has done already
+### What Foundation has done already
 
 Foundation is released on the website where we have collected our developments.
 We hope they make learning a language easier and more productive.
 
-### New Documentation
+#### New Documentation
 
 We have revised most of the documentation articles and placed them in a convenient form on
 [docs.vlang.foundation](https://docs.vlang.foundation).
@@ -66,7 +66,7 @@ Learn more in this article:
 
 {{< article-link link="/meet-new-documentation.md" >}}
 
-### Modules API website
+#### Modules API website
 
 V itself has a fairly extensive standard library with many modules.
 
@@ -79,7 +79,7 @@ TODO: WIP
 
 {{< article-link link="/meet-modules-platform.md" >}}
 
-### Playground
+#### Playground
 
 Prior to the creation of the Foundation, we had already improved the official Playground with a new
 look and feel.
@@ -87,7 +87,7 @@ Now we have taken it a step further, and it now has a new backend that allows us
 new features such as viewing the generated C code or passing arguments when compile or
 run the program.
 
-#### Embedded playground component
+##### Embedded playground component
 
 As part of the Playground update, we also created a component that can be embedded in any
 page.
@@ -111,7 +111,7 @@ fn main() {
 
 {{< article-link link="/meet-updated-playground.md" >}}
 
-### Vings
+#### Vings
 
 Vings is a platform for learning V through solving small problems.
 On it, anyone can start learning V through solving problems, each of which will link to the
@@ -119,7 +119,7 @@ documentation about a current topic.
 
 {{< article-link link="/meet-vings-platform.md" >}}
 
-### Blog
+#### Blog
 
 We think any language should have a platform where it posts information about updates, changes, or
 event announcements.
@@ -128,7 +128,7 @@ We have created a blog where we will post news about V so that users can get new
 information quickly.
 We will also be posting tutorials there that will tell users how to do something in V.
 
-### IntelliJ V
+#### IntelliJ V
 
 The JetBrains IDE plugin is now also part of the Foundation and will be further developed
 officially.
@@ -146,7 +146,7 @@ alt="Screenshot showing the IntelliJ V">
 
 {{< /rawhtml >}}
 
-### ORM
+#### ORM
 
 One of the main parts of modern web development is working with a database.
 In V, the tool for high-level interactions with the database is ORM.
@@ -157,9 +157,9 @@ added a check for expressions that do not make sense at runtime,
 and improved the typing of attributes for relationships between tables.
 The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 
-## Plans
+### Plans
 
-### New Language Server
+#### New Language Server
 
 The Foundation's first big task will be to develop a new Language Server for V.
 This is an important project as most programmers use VS Code or Vim, for which the plugins provide
@@ -173,7 +173,7 @@ A quality LS will solve this problem and make V much more convenient to use.
 
 Open beta testing is planned in 2 months, we will announce the start of testing in advance.
 
-### Debug enhancements with GDB and LLDB
+#### Debug enhancements with GDB and LLDB
 
 In parallel with the creation of the new LS, we plan to qualitatively improve the debugging
 capabilities of the V code.
@@ -206,7 +206,7 @@ alt="Screenshot showing the debugger inside IntelliJ V plugin">
 
 {{< /rawhtml >}}
 
-### Language Grammar Formalization
+#### Language Grammar Formalization
 
 Right now, a small group of developers is developing a new compiler architecture.
 The goal is to make a compiler according to all the canons of the industry, taking into account all
@@ -229,7 +229,7 @@ In parallel with the development of the two things above, we will continue to fo
 which will result in a page in the documentation with a complete grammar of the language that can be
 used to create third-party tools.
 
-### Continue improving ORM
+#### Continue improving ORM
 
 There is still a lot of work to improve ORM.
 Now the ORM functionality covers only the basic needs for performing CRUD tasks,
