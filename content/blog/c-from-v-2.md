@@ -82,13 +82,13 @@ code with the C compiler, as well as what code V produces.
 Shows all options that will be passed to the C compiler.
 Let's try to build with this flag and see what it produces:
 
-```
+```shell
 v -showcc .
 ```
 
 output:
 
-```
+```text
 > C compiler cmd: 'cc' '@/tmp/v_501/c_from_v.14958817527713629059.tmp.c.rsp'
 > C compiler response file "/tmp/v_501/c_from_v.14958817527713629059.tmp.c.rsp":
    -std=c99
@@ -120,7 +120,7 @@ it and moved it to its folder.
 If you compile the program with this flag when we passed the path to the
 library, then the lines will be added there:
 
-```
+```text
 -L ".../c_from_v/c"
 -lfib
 ```
@@ -146,7 +146,7 @@ with the `-showcc` flag.
 These aren't all the flags that are available for the C backend.
 You can see all with the following command:
 
-```
+```shell
 v help build-c
 ```
 

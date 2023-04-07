@@ -680,7 +680,7 @@ fn test_shapes_only() {
 ```
 
 As always, we run the tests with `v test .` from the root of the project.
-If we need to run only the unit tests, we can type ` v test geometry`
+If we need to run only the unit tests, we can type `v test geometry`
 instead. Remember to use `Tab` for autocomplete support for paths.
 
 ## BONUS: Running Specific Tests

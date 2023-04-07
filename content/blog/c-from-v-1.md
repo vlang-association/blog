@@ -163,7 +163,7 @@ v run .
 
 Output:
 
-```
+```text
 55
 ```
 
