@@ -34,9 +34,6 @@ From their financial support, the project can receive the necessary resources fo
 For example, **hire people** who will be involved in language development, documentation, testing,
 etc.
 
-However, when funding is not transparent, neither community members nor the sponsors themselves know
-where the funding goes or how it is spent.
-
 The V Software Foundation is registered on the
 [Open Collective](https://opencollective.com/) platform,
 allowing anyone interested to keep
@@ -44,8 +41,7 @@ track of where the money is going and how it's being spent.
 
 # Deadlines
 
-Unlike the development of the language itself, the Foundation **respects deadlines**, and we believe
-that deadlines help to make the evolution of the language/ecosystem transparent.
+We believe that deadlines help to make the evolution of the language/ecosystem transparent.
 Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
 it is not critical if this phenomenon does not become permanent.
 The Foundation **will notify** the community of any postponements, if any.
