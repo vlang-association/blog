@@ -1,21 +1,20 @@
 ---
-title: "Introducing the V Software Foundation"
+title: "Introducing the V Open Source Foundation"
 subtitle: Brief overview of the Foundation's mission
-summary: "The Foundation is a non-profit organization that is dedicated to the development of the V language. It is a place where people can come together to work on the V language and its ecosystem."
+summary: "The V Open Source Foundation is a non-profit organization that is dedicated to the development of the V language. It is a place where people can come together to work on the V language and its ecosystem."
 page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
 categories: [ "Announcements", "Foundation" ]
 date: 2023-03-30T09:34:23+04:00
-image: images/why-we-need-foundation/foundation.png
+image: images/why-we-need-foundation/vosf.png
 pinned: true
 ---
 
 Hi, we,
 [Petr](https://github.com/i582), and
 [Mark aka walkingdevel](https://github.com/walkingdevel)
-from the V development team, announce the
-creation of the V Software Foundation.
+from the V development team, announce the creation of the **V Open Source Foundation**.
 
 The Foundation is a **non-profit organization** that is dedicated to the development of the V
 language.
@@ -34,8 +33,8 @@ From their financial support, the project can receive the necessary resources fo
 For example, **hire people** who will be involved in language development, documentation, testing,
 etc.
 
-The V Software Foundation is registered on the
-[Open Collective](https://opencollective.com/) platform,
+The V Open Source Foundation is registered on the
+[Open Collective](https://opencollective.com/vsof) platform,
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
 
@@ -102,8 +101,7 @@ and here, in blog.
 fn main() {
 	areas := ['game', 'web', 'tools', 'science', 'systems',
 	          'embedded', 'drivers', 'GUI', 'mobile']
-	
-    for area in areas {
+	for area in areas {
 		println('Hello, ${area} developers!')
 	}
 }
@@ -155,7 +153,8 @@ But while ORM gave good abstractions, it didn't provide good type checks and sec
 We have written a type check for all parts of ORM query expressions,
 added a check for expressions that do not make sense at runtime,
 and improved the typing of attributes for relationships between tables.
-The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for all queries and array as a type, even for queries with `limit 1` or `id == ?`.
+The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for
+all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 
 ### Plans
 
@@ -234,7 +233,8 @@ used to create third-party tools.
 There is still a lot of work to improve ORM.
 Now the ORM functionality covers only the basic needs for performing CRUD tasks,
 but all of them do not go beyond pet-projects.
-And there is functionality that the community has been waiting for a long time. For example, the operators `like` and `in`.
+And there is functionality that the community has been waiting for a long time.
+For example, the operators `like` and `in`.
 
 Based on the existing problems and user wishes, we have built the following roadmap for ORM:
 
