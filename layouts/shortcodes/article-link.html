@@ -1,5 +1,7 @@
 {{ with .Site.GetPage (.Get "link") }}
 
-{{ partial "article-card" . }}
+<div class="embedded-article-link">
+    {{ partial "embedded-article-card" . }}
+</div>
 
 {{ end }}

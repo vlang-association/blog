@@ -265,6 +265,13 @@ html[data-theme="dark"] {
       }
     }
 
+    .embedded-article-link {
+      position: relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 100%;
+    }
+
     .content {
       margin-top: -130px;
       margin-bottom: 80px;
