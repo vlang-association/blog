@@ -5,7 +5,7 @@ summary: ""
 page: Blog
 authorname: Mark aka walkingdevel
 authorlink: walkingdevel
-categories: [ "Announcements" ]
+categories: [ "ORM" ]
 date: 2023-04-06T17:32:01+00:00
 image: images/is-v-orm-direction-right/cover.png
 ---
