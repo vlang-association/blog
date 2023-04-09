@@ -1,16 +1,24 @@
 {
-  "name": "vlang-blog",
+  "name": "vlang-foundation/blog",
   "version": "1.0.0",
   "description": "Source code for V Foundation Blog",
   "scripts": {
     "sass-watch": "sass --watch static/scss/index.scss:static/css/index.css",
     "sass-build": "sass static/scss/index.scss:static/css/index.css",
-    "hugo-watch": "hugo serve",
+    "hugo-serve": "hugo serve",
     "hugo-build": "hugo",
     "build": "npm run sass-build && npm run hugo-build",
+    "serve": "npm run sass-build && npm run hugo-serve",
     "clean": "rm -rf public"
   },
-  "author": "Petr Makhnev",
+  "author": {
+    "name": "V Open Source Foundation",
+    "url": "https://vlang.foundation/"
+  },
+  "contributors": [
+    "Petr Makhnev",
+    "Mark @walkingdevel"
+  ],
   "bugs": {
     "url": "https://github.com/vlang-foundation/blog/issues"
   },
