@@ -18,14 +18,18 @@
     </div>
 
     <div class="posts-block">
+        {{ $articlesAsAuthor := where .Site.Pages.ByPublishDate.Reverse "Params.authorlink" $authorlink }}
+        {{ $articlesAsCoAuthor := where .Site.Pages.ByPublishDate.Reverse "Params.co_authorlink" $authorlink }}
+        {{ $articles := union $articlesAsAuthor $articlesAsCoAuthor }}
+
         <div class="pinned-article">
-            {{ range first 1 ( where .Site.Pages.ByPublishDate.Reverse "Params.authorlink" $authorlink )}}
+            {{ range first 1 $articles}}
                 {{ partial "big-article-card.html" . }}
             {{ end }}
         </div>
 
         <div class="article-cards">
-            {{ range .Site.Pages.ByPublishDate.Reverse }}
+            {{ range (after 1 $articles) }}
                 {{ if eq .Params.authorlink $authorlink }}
                     {{ partial "article-card.html" . }}
                 {{ end }}

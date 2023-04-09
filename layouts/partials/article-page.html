@@ -30,18 +30,26 @@
                 </div>
 
                 <div class="details">
-                    <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <div class="authors">
+                        {{ $authorLinks := slice .Params.authorlink .Params.co_authorlink }}
+                        {{ $authorNames := slice .Params.authorname .Params.co_authorname }}
+
+                        {{ range $index, $authorName := $authorNames }}
+                            {{ $authorLink := index $authorLinks $index }}
+                            <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span class="avatar">
-                                    <img src="/images/avatar/{{ .Params.authorlink }}.png"
-                                         alt="{{ .Params.authorname }} avatar"
+                                    <img src="/images/avatar/{{ $authorLink }}.png"
+                                         alt="{{ $authorName }} avatar"
                                          itemprop="image">
                                 </span>
-                        <a href="/people/{{ .Params.authorlink }}" itemprop="url">
+                                <a href="/people/{{ $authorLink }}" itemprop="url">
                                     <span itemprop="name">
-                                        {{ .Params.authorname }}
+                                        {{ $authorName }}
                                     </span>
-                        </a>
-                    </p>
+                                </a>
+                            </p>
+                        {{ end }}
+                    </div>
 
                     {{ $dateTime := .Params.date.Format "2006-01-02" }}
                     {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}

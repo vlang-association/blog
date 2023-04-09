@@ -5,6 +5,8 @@ summary: "The V Open Source Foundation is a non-profit organization that is dedi
 page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
+co_authorname: Mark aka walkingdevel
+co_authorlink: walkingdevel
 categories: [ "Announcements", "Foundation" ]
 date: 2023-03-30T09:34:23+04:00
 image: images/why-we-need-foundation/vosf.png

@@ -1296,7 +1296,19 @@ html[data-theme=dark] {
   justify-self: end;
   font-family: "JetBrains Mono", monospace;
 }
-.article .article-header .article-header-wrapper .details .author {
+@media (max-width: 1000px) {
+  .article .article-header .article-header-wrapper .details .date {
+    line-height: 1.7;
+  }
+}
+.article .article-header .article-header-wrapper .details .authors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 15px;
+}
+.article .article-header .article-header-wrapper .details .authors .author {
   margin: 0;
   width: max-content;
   display: grid;
@@ -1304,7 +1316,7 @@ html[data-theme=dark] {
   grid-column-gap: 10px;
   align-items: center;
 }
-.article .article-header .article-header-wrapper .details .author .avatar {
+.article .article-header .article-header-wrapper .details .authors .author .avatar {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -1313,12 +1325,12 @@ html[data-theme=dark] {
   margin-right: 10px;
   vertical-align: middle;
 }
-.article .article-header .article-header-wrapper .details .author .avatar img {
+.article .article-header .article-header-wrapper .details .authors .author .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.article .article-header .article-header-wrapper .details .author a {
+.article .article-header .article-header-wrapper .details .authors .author a {
   display: block;
   font-size: 15px;
   color: var(--text-color);
@@ -1327,7 +1339,7 @@ html[data-theme=dark] {
   box-shadow: 0 1px 0 0 var(--text-color);
   transition: box-shadow 0.15s ease-in-out;
 }
-.article .article-header .article-header-wrapper .details .author a:hover {
+.article .article-header .article-header-wrapper .details .authors .author a:hover {
   box-shadow: 0 2px 0 0 var(--text-color);
 }
 .article .article-header .article-header-wrapper .article-image {
