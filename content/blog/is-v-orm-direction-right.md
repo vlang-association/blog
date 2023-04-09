@@ -15,6 +15,7 @@ I want to understand what needs to be improved, otherwise, it needs to be rework
 And the official V ORM documentation will help us with this.
 
 The official documentation says the following about the V ORM:
+
 - One syntax for all SQL dialects. (Migrating between databases becomes much easier)
 - Queries are constructed using V's syntax. (There's no need to learn another syntax)
 - Safety. (All queries are automatically sanitized to prevent SQL injection)
@@ -79,6 +80,7 @@ and expanding the V ORM syntax so that it allows you to write more complex queri
 
 The following roadmap can make this point valid
 (once these items are finished, they will be marked as completed):
+
 - [ ] Support for optional fields for structures and `NULL`s
 - [ ] The `like` operator
 - [ ] The `in` operator
