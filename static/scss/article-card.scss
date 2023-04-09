@@ -65,29 +65,39 @@ html[data-theme="dark"] {
         color: var(--secondary-color);
       }
 
-      .author {
-        display: grid;
-        grid-template-columns: 30px auto;
-        grid-column-gap: 2px;
-        align-items: center;
+      .authors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 10px;
 
-        margin: 10px 0 10px !important;
-        font-size: 13px !important;
-        color: var(--secondary-color);
-        height: max-content;
+        margin: 10px 0 10px;
 
-        .avatar {
-          display: inline-block;
-          width: 25px;
-          height: 25px;
-          border-radius: 50%;
-          overflow: hidden;
-          vertical-align: middle;
+        .author {
+          display: grid;
+          grid-template-columns: 30px auto;
+          grid-column-gap: 2px;
+          align-items: center;
 
-          img {
-            width: 100%;
-            height: 101%; // safari fix
-            object-fit: cover;
+          margin: 0 !important;
+          font-size: 13px !important;
+          color: var(--secondary-color);
+          height: max-content;
+
+          .avatar {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+            vertical-align: middle;
+
+            img {
+              width: 100%;
+              height: 101%; // safari fix
+              object-fit: cover;
+            }
           }
         }
       }

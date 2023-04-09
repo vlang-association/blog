@@ -5,14 +5,22 @@
         />
     </a>
     <div class="information">
-        <p class="author">
-        <span class="avatar">
-            <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
-        </span>
-            <span>
-            {{ .Params.authorname }}
-        </span>
-        </p>
+        <div class="authors">
+            {{ $authorLinks := slice .Params.authorlink .Params.co_authorlink }}
+            {{ $authorNames := slice .Params.authorname .Params.co_authorname }}
+
+            {{ range $index, $authorName := $authorNames }}
+                {{ $authorLink := index $authorLinks $index }}
+                <p class="author">
+                <span class="avatar">
+                    <img src="/images/avatar/{{ $authorLink }}.png"alt="{{ $authorName }} avatar">
+                </span>
+                    <span itemprop="name">
+                    {{ $authorName }}
+                </span>
+                </p>
+            {{ end }}
+        </div>
 
         <h3 class="title">
             <a href="{{ .RelPermalink }}">
