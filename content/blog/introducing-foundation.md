@@ -145,8 +145,9 @@ feature set.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/intellij-v.png"
-alt="Screenshot showing the IntelliJ V">
+  src="/images/why-we-need-foundation/intellij-v.png"
+  alt="Screenshot showing the IntelliJ V"
+/>
 <figcaption>IntelliJ V</figcaption>
 </figure>
 
@@ -163,6 +164,8 @@ added a check for expressions that do not make sense at runtime,
 and improved the typing of attributes for relationships between tables.
 The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for
 all queries and array as a type, even for queries with `limit 1` or `id == ?`.
+
+{{< article-link link="/is-v-orm-direction-right.md" >}}
 
 ### Plans
 
@@ -192,8 +195,9 @@ with.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/raw-debugger-view.png"
-alt="Screenshot showing the debugger raw values for V array type">
+  src="/images/why-we-need-foundation/raw-debugger-view.png"
+  alt="Screenshot showing the debugger raw values for V array type"
+/>
 <figcaption>Current V array representation in debugger</figcaption>
 </figure>
 
@@ -206,8 +210,9 @@ for JetBrains IDE.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/idea-debugger-view.png"
-alt="Screenshot showing the debugger inside IntelliJ V plugin">
+  src="/images/why-we-need-foundation/idea-debugger-view.png"
+  alt="Screenshot showing the debugger inside IntelliJ V plugin"
+/>
 <figcaption>Types view in IntelliJ V plugin</figcaption>
 </figure>
 
@@ -225,8 +230,9 @@ EBNF format.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/ebnf-example.png"
-alt="Screenshot showing the EBNF grammar for Golang">
+  src="/images/why-we-need-foundation/ebnf-example.png"
+  alt="Screenshot showing the EBNF grammar for Golang"
+/>
 <figcaption>EBNF grammar of Golang</figcaption>
 </figure>
 
