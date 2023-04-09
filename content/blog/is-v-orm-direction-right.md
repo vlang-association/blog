@@ -91,8 +91,8 @@ The following roadmap can make this point valid
 - [ ] Support for structures that do not have an `id` field
 - [ ] Support for migrations
 
-**And when more complex queries are allowed,
-and migrations modify tables and their data, we can consider this point fully valid.**
+> And when more complex queries are allowed,
+> and migrations modify tables and their data, we can consider this point fully valid.
 
 ## Queries are constructed using V's syntax
 
@@ -184,29 +184,48 @@ dependent on one C backend, and hard to extend.
 
 My first step will be to simplify cgen for V ORM as much as possible,
 so that it can be easily modified by anyone, especially for queries involving multiple tables.
-Next, I will fix all user problems related to V ORM and low-level libraries for databases.
+Next, I will fix all issues related to V ORM and low-level libraries for databases.
 As soon as it's all done, I will start stuffing it with new features.
 
 My goal is to finish developing the V ORM so that it can be used not only for creating new projects
 but also for transferring old ones.
 This will enable the V ORM to work seamlessly with existing database schemes.
 
-In my opinion, the ability to work conveniently with both the web and databases
-often surpasses other language features because of the ubiquitous nature of the Web.
-This can lead to the growth of the community
-since developers can more easily create web applications with database support.
+I believe that the capability to work efficiently with both web and databases
+is a highly valued aspect that often takes precedence over other language features,
+mainly due to the omnipresence of the web.
+This, in turn, can foster the expansion of the developer community
+since it facilitates the creation of web applications with database integration.
 
 But what about the title of this article? I think V ORM is a good concept.
 But in general, this idea seems utopian,
 as it would require either constantly requesting developers
 to add new functionality or reverting to raw SQL queries.
+Because if you named it SQL, be kind to implement the standard.
+
+{{< rawhtml >}}
+
+<figure>
+<img src="/images/is-v-orm-direction-right/vql.png"
+alt="Screenshot showing the V ORM query in SQLite"/>
+<figcaption>V ORM query in SQLite.</figcaption>
+</figure>
+
+{{< /rawhtml >}}
+
+By the way, I would like to suggest changing the `sql` keyword to `vql`,
+which stands for V Query Language.
+This is because the language is based on SQL
+but does not fully adhere to the SQL standard.
+After renaming, we would have more flexibility to make changes that do not fit into the SQL.
 Perhaps we need to provide another user-friendly interface for raw queries.
-I did not think about it. But when I fix low-level libraries,
+I haven't thought about it enough yet.
+But when I fix low-level libraries,
 I will write another article with thoughts about it.
 
-Even if the direction is wrong, we will correct it.
+> Even if the direction is wrong, we will correct it.
 
-And when there are no open [issues](https://github.com/vlang/v/issues?q=is%3Aissue+is%3Aopen+orm)
+When there are no open [issues](https://github.com/vlang/v/issues?q=is%3Aissue+is%3Aopen+orm)
 related to ORM in the V repository,
 I plan to demonstrate how it can be implemented outside the compiler,
 highlighting its ease and simplicity. Stay tuned.
