@@ -78,6 +78,8 @@ simplifies the search for the right one.
 
 TODO: WIP
 
+Learn more in this article:
+
 {{< article-link link="/meet-modules-platform.md" >}}
 
 #### Playground
@@ -109,6 +111,8 @@ fn main() {
 }
 ```
 
+Learn more in this article:
+
 {{< article-link link="/meet-updated-playground.md" >}}
 
 #### Vings
@@ -116,6 +120,8 @@ fn main() {
 Vings is a platform for learning V through solving small problems.
 On it, anyone can start learning V through solving problems, each of which will link to the
 documentation about a current topic.
+
+Learn more in this article:
 
 {{< article-link link="/meet-vings-platform.md" >}}
 

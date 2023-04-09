@@ -1008,20 +1008,29 @@ html[data-theme=dark] {
   text-decoration: none;
   color: var(--text-color);
   background-color: var(--pinned-article-background-color);
+  border: 1px solid var(--border-color);
 }
 @media (max-width: 670px) {
   .embedded-article-card {
     grid-template-columns: auto;
-    border: 1px solid var(--border-color);
   }
+}
+.embedded-article-card > a {
+  height: 100%;
+}
+.embedded-article-card a {
+  color: var(--text-color) !important;
+}
+.embedded-article-card a:visited {
+  color: var(--text-color) !important;
 }
 .embedded-article-card img {
   max-width: 100%;
-  max-height: 400px;
+  height: 100%;
   border-radius: 8px;
 }
 .embedded-article-card .information {
-  padding: 30px 0 30px 30px;
+  padding: 20px 20px 25px 30px;
 }
 @media (max-width: 670px) {
   .embedded-article-card .information {
