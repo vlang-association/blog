@@ -1206,7 +1206,7 @@ html[data-theme=dark] {
 }
 
 .article {
-  font-size: 18px;
+  font-size: 17px;
 }
 .article .article-header {
   padding: 100px 0 20px;
@@ -1444,8 +1444,14 @@ html[data-theme=dark] {
   font-weight: 500;
 }
 .article .article-content .content h3 {
-  font-size: 20px;
+  font-size: 28px;
   margin: 34px 0 16px;
+}
+.article .article-content .content h4 {
+  font-size: 23px;
+}
+.article .article-content .content h5 {
+  font-size: 20px;
 }
 .article .article-content .content p {
   margin: 0 0 24px;
@@ -1455,7 +1461,7 @@ html[data-theme=dark] {
   color: var(--article-text-color);
 }
 .article .article-content .content li {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 .article .article-content .content a {
   color: var(--article-link-text-color);

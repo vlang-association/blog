@@ -3,14 +3,15 @@
         <div class="article-header-wrapper">
             <div class="categories">
                 <ul>
-                    {{ with .Params.categories }} {{ range . }}
-                        {{ $href := print (absURL "categories/") (urlize .) }}
-                        <li>
-                            <a class="category {{ .}}" href="{{ $href }}/">
-                                {{ . }}
-                            </a>
-                        </li>
-                    {{ end }}
+                    {{ with .Params.categories }}
+                        {{ range . }}
+                            {{ $href := print (absURL "categories/") (urlize .) }}
+                            <li>
+                                <a class="category {{ .}}" href="{{ $href }}/">
+                                    {{ . }}
+                                </a>
+                            </li>
+                        {{ end }}
                     {{ end }}
                 </ul>
             </div>
@@ -111,11 +112,13 @@
                         <!-- Process latest posts first -->
                         {{ if eq .Params.authorlink $authorlink }}
                             {{ partial "article-card.html" . }}
-                        {{ end }} {{ end }} {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             </div>
         {{ end }}
-        {{ if .Params.authorname }}
 
+        {{ if .Params.authorname }}
             {{ if eq .Params.Page "Blog" }}
                 <div class="giscus"></div>
                 <script
@@ -137,6 +140,7 @@
                         changeGiscusTheme(currentTheme)
                     }, 3000)
                 </script>
-            {{ end }} {{ end }}
+            {{ end }}
+        {{ end }}
     </div>
 </div>

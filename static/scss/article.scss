@@ -19,7 +19,7 @@ html[data-theme="dark"] {
 }
 
 .article {
-  font-size: 18px;
+  font-size: 17px;
 
   .article-header {
     padding: 100px 0 20px;
@@ -286,8 +286,16 @@ html[data-theme="dark"] {
       }
 
       h3 {
-        font-size: 20px;
+        font-size: 28px;
         margin: 34px 0 16px;
+      }
+
+      h4 {
+        font-size: 23px;
+      }
+
+      h5 {
+        font-size: 20px;
       }
 
       p {
@@ -299,7 +307,7 @@ html[data-theme="dark"] {
       }
 
       li {
-        line-height: 1.5;
+        line-height: 1.8;
       }
 
       a {
