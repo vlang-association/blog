@@ -145,9 +145,8 @@ feature set.
 
 <figure>
 <img
-  src="/images/why-we-need-foundation/intellij-v.png"
-  alt="Screenshot showing the IntelliJ V"
-/>
+src="/images/why-we-need-foundation/intellij-v.png"
+alt="Screenshot showing the IntelliJ V">
 <figcaption>IntelliJ V</figcaption>
 </figure>
 
@@ -195,9 +194,8 @@ with.
 
 <figure>
 <img
-  src="/images/why-we-need-foundation/raw-debugger-view.png"
-  alt="Screenshot showing the debugger raw values for V array type"
-/>
+src="/images/why-we-need-foundation/raw-debugger-view.png"
+alt="Screenshot showing the debugger raw values for V array type">
 <figcaption>Current V array representation in debugger</figcaption>
 </figure>
 
@@ -210,9 +208,8 @@ for JetBrains IDE.
 
 <figure>
 <img
-  src="/images/why-we-need-foundation/idea-debugger-view.png"
-  alt="Screenshot showing the debugger inside IntelliJ V plugin"
-/>
+src="/images/why-we-need-foundation/idea-debugger-view.png"
+alt="Screenshot showing the debugger inside IntelliJ V plugin">
 <figcaption>Types view in IntelliJ V plugin</figcaption>
 </figure>
 
@@ -230,9 +227,8 @@ EBNF format.
 
 <figure>
 <img
-  src="/images/why-we-need-foundation/ebnf-example.png"
-  alt="Screenshot showing the EBNF grammar for Golang"
-/>
+src="/images/why-we-need-foundation/ebnf-example.png"
+alt="Screenshot showing the EBNF grammar for Golang">
 <figcaption>EBNF grammar of Golang</figcaption>
 </figure>
 
