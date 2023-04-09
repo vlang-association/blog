@@ -37,18 +37,20 @@
 
                         {{ range $index, $authorName := $authorNames }}
                             {{ $authorLink := index $authorLinks $index }}
-                            <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            {{ if $authorLink }}
+                                <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span class="avatar">
                                     <img src="/images/avatar/{{ $authorLink }}.png"
                                          alt="{{ $authorName }} avatar"
                                          itemprop="image">
                                 </span>
-                                <a href="/people/{{ $authorLink }}" itemprop="url">
+                                    <a href="/people/{{ $authorLink }}" itemprop="url">
                                     <span itemprop="name">
                                         {{ $authorName }}
                                     </span>
-                                </a>
-                            </p>
+                                    </a>
+                                </p>
+                            {{ end }}
                         {{ end }}
                     </div>
 

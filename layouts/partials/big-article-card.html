@@ -11,14 +11,16 @@
 
             {{ range $index, $authorName := $authorNames }}
                 {{ $authorLink := index $authorLinks $index }}
-                <p class="author">
-                <span class="avatar">
-                    <img src="/images/avatar/{{ $authorLink }}.png"alt="{{ $authorName }} avatar">
-                </span>
-                    <span itemprop="name">
-                    {{ $authorName }}
-                </span>
-                </p>
+                {{ if $authorLink }}
+                    <p class="author">
+                        <span class="avatar">
+                            <img src="/images/avatar/{{ $authorLink }}.png" alt="{{ $authorName }} avatar">
+                        </span>
+                        <span itemprop="name">
+                            {{ $authorName }}
+                        </span>
+                    </p>
+                {{ end }}
             {{ end }}
         </div>
 
