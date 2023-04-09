@@ -28,6 +28,13 @@ development and advertising of the language.
 However, one person does not always keep track of all aspects of the development and spread of a
 language.
 
+## Deadlines
+
+We believe that deadlines help to make the evolution of the language/ecosystem transparent.
+Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
+it is not critical if this phenomenon does not become permanent.
+The Foundation **will notify** the community of any postponements, if any.
+
 ## Funding
 
 The development of almost any open source project is **very dependent on sponsors**.
@@ -39,13 +46,6 @@ The V Open Source Foundation is registered on the
 [Open Collective](https://opencollective.com/vsof) platform,
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
-
-## Deadlines
-
-We believe that deadlines help to make the evolution of the language/ecosystem transparent.
-Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
-it is not critical if this phenomenon does not become permanent.
-The Foundation **will notify** the community of any postponements, if any.
 
 ### What Foundation has done already
 
@@ -67,21 +67,6 @@ Learn more in this article:
 
 {{< article-link link="/meet-new-documentation.md" >}}
 
-#### Modules API website
-
-V itself has a fairly extensive standard library with many modules.
-
-Navigating it is not always convenient, so we
-created [modules.vlang.foundation](https://modules.vlang.foundation/standard_library/index.html)
-that shows all the modules of the standard library along with a search for them, which greatly
-simplifies the search for the right one.
-
-TODO: WIP
-
-Learn more in this article:
-
-{{< article-link link="/meet-modules-platform.md" >}}
-
 #### Playground
 
 Prior to the creation of the Foundation, we had already improved the official Playground with a new
@@ -96,7 +81,7 @@ As part of the Playground update, we also created a component that can be embedd
 page.
 Thus, on any page you can get a convenient playground where you can edit and run V code.
 This component is already used in
-[documentation](https://docs.vlang.foundation),
+[Documentation](https://docs.vlang.foundation),
 [Vings](https://learn.vlang.foundation/vings),
 [Modules](https://modules.vlang.foundation/),
 and here, in blog.
@@ -125,6 +110,35 @@ Learn more in this article:
 
 {{< article-link link="/meet-vings-platform.md" >}}
 
+#### ORM
+
+One of the main parts of modern web development is working with a database.
+In V, the tool for high-level interactions with the database is ORM.
+But while ORM gave good abstractions, it did not provide good type checks and security.
+
+We have written a type check for all parts of ORM query expressions,
+added a check for expressions that do not make sense at runtime,
+and improved the typing of attributes for relationships between tables.
+The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for
+all queries and array as a type, even for queries with `limit 1` or `id == ?`.
+
+{{< article-link link="/is-v-orm-direction-right.md" >}}
+
+#### Modules API website
+
+V itself has a fairly extensive standard library with many modules.
+
+Navigating it is not always convenient, so we
+created [modules.vlang.foundation](https://modules.vlang.foundation/standard_library/index.html)
+that shows all the modules of the standard library along with a search for them, which greatly
+simplifies the search for the right one.
+
+TODO: WIP
+
+Learn more in this article:
+
+{{< article-link link="/meet-modules-platform.md" >}}
+
 #### Blog
 
 We think any language should have a platform where it posts information about updates, changes, or
@@ -151,20 +165,6 @@ alt="Screenshot showing the IntelliJ V">
 </figure>
 
 {{< /rawhtml >}}
-
-#### ORM
-
-One of the main parts of modern web development is working with a database.
-In V, the tool for high-level interactions with the database is ORM.
-But while ORM gave good abstractions, it didn't provide good type checks and security.
-
-We have written a type check for all parts of ORM query expressions,
-added a check for expressions that do not make sense at runtime,
-and improved the typing of attributes for relationships between tables.
-The main [recent change](https://github.com/vlang/v/pull/17871) was the addition of a `Result` for
-all queries and array as a type, even for queries with `limit 1` or `id == ?`.
-
-{{< article-link link="/is-v-orm-direction-right.md" >}}
 
 ### Plans
 

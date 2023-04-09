@@ -30,9 +30,7 @@
 
         <div class="article-cards">
             {{ range (after 1 $articles) }}
-                {{ if eq .Params.authorlink $authorlink }}
-                    {{ partial "article-card.html" . }}
-                {{ end }}
+                {{ partial "article-card.html" . }}
             {{ end }}
         </div>
     </div>
