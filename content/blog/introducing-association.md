@@ -16,7 +16,7 @@ pinned: true
 Hi, we,
 [Petr](https://github.com/i582), and
 [Mark aka walkingdevel](https://github.com/walkingdevel)
-from the V development team, announce the creation of the **V Open Source Community Association** 
+from the V development team, announce the creation of the **V Open Source Community Association**
 aka VOSCA.
 
 The Association is a **non-profit organization** that is dedicated to the development of the V
@@ -93,7 +93,7 @@ and here, in blog.
 ```v
 fn main() {
 	areas := ['game', 'web', 'tools', 'science', 'systems',
-	          'embedded', 'drivers', 'GUI', 'mobile']
+	'embedded', 'drivers', 'GUI', 'mobile']
 	for area in areas {
 		println('Hello, ${area} developers!')
 	}
@@ -159,6 +159,9 @@ officially.
 The plugin is currently the best solution for V development and provides the widest
 feature set.
 
+You can learn more about the plugin on the landing page:
+[https://intellij-v.github.io](https://intellij-v.github.io).
+
 {{< rawhtml >}}
 
 <figure>
@@ -169,6 +172,10 @@ alt="Screenshot showing the IntelliJ V">
 </figure>
 
 {{< /rawhtml >}}
+
+Today we also released the first version of the plugin on behalf of the Association:
+
+{{< article-link link="/intellij-v-beta-4.md" >}}
 
 ### Plans
 
