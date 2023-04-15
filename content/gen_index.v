@@ -24,8 +24,7 @@ fn generate_json_line(filepath string) ?string {
 	body := lines.join('\\n').replace('\u0009', '').replace('"', '\\"')
 
 	folder := if filepath.contains('/people/') { 'people/' } else { '' }
-	url := 'https://blog.vlang.foundation/${folder}' +
-		os.file_name(filepath).trim_string_right('.md')
+	url := 'https://blog.vosca.dev/${folder}' + os.file_name(filepath).trim_string_right('.md')
 
 	return '{ "id": ${counter++}, "title": "${process_content(title)}", "body": "${process_content(body)}", "url": "${url}" },'
 }

@@ -1,8 +1,8 @@
-# V Foundation Blog
+# V Open Source Community Association Blog
 
-[![Foundation Official Project][FoundationOfficialBadge]][FoundationUrl]
+[![Association Official Project][AssociationOfficialBadge]][AssociationUrl]
 
-Source code for the [V Foundation Blog](https://blog.vlang.foundation).
+Source code for the [V Open Source Community Association Blog](https://blog.vosca.dev).
 
 ## Build locally
 
@@ -36,9 +36,9 @@ npm run sass-watch
 ## License
 
 This project is under the **MIT License**. See the
-[LICENSE](https://github.com/vlang-foundation/blog/blob/master/LICENSE)
+[LICENSE](https://github.com/vlang-association/blog/blob/master/LICENSE)
 file for the full license text.
 
-[FoundationOfficialBadge]: https://vlang.foundation/badge.svg
+[AssociationOfficialBadge]: https://vosca.dev/badge.svg
 
-[FoundationUrl]: https://vlang.foundation
+[AssociationUrl]: https://vosca.dev

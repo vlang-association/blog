@@ -9,28 +9,28 @@
     <link rel="stylesheet" href="/css/vlang-playground.css">
 
     <!-- Preload -->
-    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Regular.woff2"
+    <link rel="preload" href="https://vosca.dev/fonts/JetBrainsSans-Regular.woff2"
           as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Medium.woff2"
+    <link rel="preload" href="https://vosca.dev/fonts/JetBrainsSans-Medium.woff2"
           as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://vlang.foundation/fonts/JetBrainsSans-Bold.woff2"
+    <link rel="preload" href="https://vosca.dev/fonts/JetBrainsSans-Bold.woff2"
           as="font" type="font/woff2" crossorigin>
 
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <!-- End Preload -->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://vlang.foundation/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://vlang.foundation/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://vlang.foundation/images/favicon-16x16.png">
-    <link rel="manifest" href="https://vlang.foundation/images/site.webmanifest">
-    <link rel="icon" type="image/x-icon" href="https://vlang.foundation/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://vosca.dev/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://vosca.dev/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://vosca.dev/images/favicon-16x16.png">
+    <link rel="manifest" href="https://vosca.dev/images/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="https://vosca.dev/images/favicon.ico">
     <!-- End Favicons -->
 
     {{ $title := "V Blog" }}
     {{ $description := "Blog about V programming language" }}
     {{ $image := "/images/open-graph/blog-cover.png" }}
-    {{ $url := "https://blog.vlang.foundation/" }}
+    {{ $url := "https://blog.vosca.dev/" }}
     {{ if eq .Params.Page "Blog" }}
         {{ $title = .Title }}
         {{ $description = .Params.subtitle }}
@@ -73,7 +73,7 @@
     <meta name="twitter:site" content="@vsf">
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $description }}">
-    <meta name="twitter:creator" content="@vlang-foundation">
+    <meta name="twitter:creator" content="@vlang-association">
     <meta name="twitter:image:src" content="{{ $image }}">
     <!-- End Twitter Card -->
 
@@ -94,12 +94,12 @@
     <!-- Schema.org WebSite -->
     <script type="application/ld+json"> {
         "@type": "WebSite",
-        "@id": "https://blog.vlang.foundation/#website",
-        "url": "https://blog.vlang.foundation/",
+        "@id": "https://blog.vosca.dev/#website",
+        "url": "https://blog.vosca.dev/",
         "name": "V Blog"
     }
     </script>
     <!-- End Schema.org -->
 
-    <title>{{ .Title | markdownify }} | V Foundation</title>
+    <title>{{ .Title | markdownify }} | V Association</title>
 </head>

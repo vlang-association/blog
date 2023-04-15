@@ -1,7 +1,7 @@
 {
-  "baseURL": "https://blog.vlang.foundation/",
+  "baseURL": "https://blog.vosca.dev/",
   "languageCode": "en-us",
-  "title": "Blog | V Foundation",
+  "title": "Blog | V Open Source Community Association",
   "ignoreFiles": [".scss$", ".ts$"],
   "minify": {
     "minifyOutput": true

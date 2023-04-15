@@ -1,7 +1,7 @@
 {
-  "name": "vlang-foundation/blog",
+  "name": "vlang-association/blog",
   "version": "1.0.0",
-  "description": "Source code for V Foundation Blog",
+  "description": "Source code for V Open Source Community Association (VOSCA) Blog",
   "scripts": {
     "sass-watch": "sass --watch static/scss/index.scss:static/css/index.css",
     "sass-build": "sass static/scss/index.scss:static/css/index.css",
@@ -12,17 +12,17 @@
     "clean": "rm -rf public"
   },
   "author": {
-    "name": "V Open Source Foundation",
-    "url": "https://vlang.foundation/"
+    "name": "V Open Source Community Association",
+    "url": "https://vosca.dev/"
   },
   "contributors": [
     "Petr Makhnev",
     "Mark @walkingdevel"
   ],
   "bugs": {
-    "url": "https://github.com/vlang-foundation/blog/issues"
+    "url": "https://github.com/vlang-association/blog/issues"
   },
-  "homepage": "https://vlang.foundation/",
+  "homepage": "https://vosca.dev/",
   "dependencies": {
     "hugo-bin": "~0.102.0",
     "sass": "^1.41.1",

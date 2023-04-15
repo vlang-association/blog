@@ -1,24 +1,25 @@
 ---
-title: "Introducing the V Open Source Foundation"
-subtitle: Brief overview of the Foundation's mission
-summary: "The V Open Source Foundation is a non-profit organization that is dedicated to the development of the V language. It is a place where people can come together to work on the V language and its ecosystem."
+title: "Introducing the V Open Source Community Association (VOSCA)"
+subtitle: Brief overview of the Association's mission
+summary: "The V Open Source Community Association (VOSCA) is a non-profit organization that is dedicated to the development of the V language. It is a place where people can come together to work on the V language and its ecosystem."
 page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
 co_authorname: Mark aka walkingdevel
 co_authorlink: walkingdevel
-categories: [ "Announcements", "Foundation" ]
+categories: [ "Announcements", "Association" ]
 date: 2023-03-30T09:34:23+04:00
-image: images/why-we-need-foundation/vosf.png
+image: images/introducing-association/vosca.png
 pinned: true
 ---
 
 Hi, we,
 [Petr](https://github.com/i582), and
 [Mark aka walkingdevel](https://github.com/walkingdevel)
-from the V development team, announce the creation of the **V Open Source Foundation**.
+from the V development team, announce the creation of the **V Open Source Community Association** 
+aka VOSCA.
 
-The Foundation is a **non-profit organization** that is dedicated to the development of the V
+The Association is a **non-profit organization** that is dedicated to the development of the V
 language.
 
 ## Prelude
@@ -33,7 +34,7 @@ language.
 We believe that deadlines help to make the evolution of the language/ecosystem transparent.
 Of course, it is not always possible to meet the deadlines, but even if the deadlines are postponed,
 it is not critical if this phenomenon does not become permanent.
-The Foundation **will notify** the community of any postponements, if any.
+The Association **will notify** the community of any postponements, if any.
 
 ## Funding
 
@@ -42,20 +43,20 @@ From their financial support, the project can receive the necessary resources fo
 For example, **hire people** who will be involved in language development, documentation, testing,
 etc.
 
-The V Open Source Foundation is registered on the
+The V Open Source Community Association is registered on the
 [Open Collective](https://opencollective.com/vsof) platform,
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
 
-### What Foundation has done already
+### What Association has done already?
 
-Foundation is released on the website where we have collected our developments.
+Association is released on the website where we have collected our developments.
 We hope they make learning a language easier and more productive.
 
 #### New Documentation
 
 We have revised most of the documentation articles and placed them in a convenient form on
-[docs.vlang.foundation](https://docs.vlang.foundation).
+[docs.vosca.dev](https://docs.vosca.dev).
 We added new articles to the already existing parts of the documentation to cover more features of
 the language.
 As a result, the documentation has grown by about **50%** compared to the original.
@@ -69,14 +70,14 @@ Learn more in this article:
 
 #### Playground
 
-Prior to the creation of the Foundation, we had already improved the official Playground with a new
+Prior to the creation of the Association, we had already improved the official Playground with a new
 look and feel.
 Now we have taken it a step further, and it now has a new backend that allows us to make
 new features such as viewing the generated C code or passing arguments when compile or
 run the program.
 
 See updated Playground in action on
-[play.vlang.foundation](https://play.vlang.foundation).
+[play.vosca.dev](https://play.vosca.dev).
 
 ##### Embedded playground component
 
@@ -84,9 +85,9 @@ As part of the Playground update, we also created a component that can be embedd
 page.
 Thus, on any page you can get a convenient playground where you can edit and run V code.
 This component is already used in
-[Documentation](https://docs.vlang.foundation),
-[Vings](https://learn.vlang.foundation/vings),
-[Modules](https://modules.vlang.foundation/),
+[Documentation](https://docs.vosca.dev),
+[Vings](https://learn.vosca.dev/vings),
+[Modules](https://modules.vosca.dev/),
 and here, in blog.
 
 ```v
@@ -132,7 +133,7 @@ all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 V itself has a fairly extensive standard library with many modules.
 
 Navigating it is not always convenient, so we
-created [modules.vlang.foundation](https://modules.vlang.foundation/standard_library/index.html)
+created [modules.vosca.dev](https://modules.vosca.dev/standard_library/index.html)
 that shows all the modules of the standard library along with a search for them, which greatly
 simplifies the search for the right one.
 
@@ -153,7 +154,7 @@ We will also be posting tutorials there that will tell users how to do something
 
 #### IntelliJ V
 
-The JetBrains IDE plugin is now also part of the Foundation and will be further developed
+The JetBrains IDE plugin is now also part of the Association and will be further developed
 officially.
 The plugin is currently the best solution for V development and provides the widest
 feature set.
@@ -162,7 +163,7 @@ feature set.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/intellij-v.png"
+src="/images/introducing-association/intellij-v.png"
 alt="Screenshot showing the IntelliJ V">
 <figcaption>IntelliJ V</figcaption>
 </figure>
@@ -173,7 +174,7 @@ alt="Screenshot showing the IntelliJ V">
 
 #### New Language Server
 
-The Foundation's first big task will be to develop a new Language Server for V.
+The Association's first big task will be to develop a new Language Server for V.
 This is an important project as most programmers use VS Code or Vim, for which the plugins provide
 only basic highlighting.
 
@@ -197,7 +198,7 @@ with.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/raw-debugger-view.png"
+src="/images/introducing-association/raw-debugger-view.png"
 alt="Screenshot showing the debugger raw values for V array type">
 <figcaption>Current V array representation in debugger</figcaption>
 </figure>
@@ -211,7 +212,7 @@ for JetBrains IDE.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/idea-debugger-view.png"
+src="/images/introducing-association/idea-debugger-view.png"
 alt="Screenshot showing the debugger inside IntelliJ V plugin">
 <figcaption>Types view in IntelliJ V plugin</figcaption>
 </figure>
@@ -230,7 +231,7 @@ EBNF format.
 
 <figure>
 <img
-src="/images/why-we-need-foundation/ebnf-example.png"
+src="/images/introducing-association/ebnf-example.png"
 alt="Screenshot showing the EBNF grammar for Golang">
 <figcaption>EBNF grammar of Golang</figcaption>
 </figure>
