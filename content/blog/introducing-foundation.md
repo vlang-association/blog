@@ -75,6 +75,9 @@ Now we have taken it a step further, and it now has a new backend that allows us
 new features such as viewing the generated C code or passing arguments when compile or
 run the program.
 
+See updated Playground in action on
+[play.vlang.foundation](https://play.vlang.foundation).
+
 ##### Embedded playground component
 
 As part of the Playground update, we also created a component that can be embedded in any
