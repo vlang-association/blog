@@ -64,7 +64,7 @@ As a result, the documentation has grown by about **50%** compared to the origin
 The site has a search so that anyone can find the information they need, the search is
 tolerant of small errors, which will also help to find information easier.
 
-Learn more in this article:
+Learn more in the following article:
 
 {{< article-link link="/meet-new-documentation.md" >}}
 
@@ -99,7 +99,7 @@ fn main() {
 }
 ```
 
-Learn more in this article:
+Learn more in the following article:
 
 {{< article-link link="/meet-updated-playground.md" >}}
 
@@ -117,18 +117,10 @@ all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 
 {{< article-link link="/is-v-orm-direction-right.md" >}}
 
-### Modules API website
+### Modules API platform
 
-V itself has a fairly extensive standard library with many modules.
-
-Navigating it is not always convenient, so we
-created [modules.vosca.dev](https://modules.vosca.dev/standard_library/index.html)
-that shows all the modules of the standard library along with a search for them, which greatly
-simplifies the search for the right one.
-
-TODO: WIP
-
-Learn more in this article:
+Modules platform is still in the early stages of development, find out what we want to do in the
+following article:
 
 {{< article-link link="/meet-modules-platform.md" >}}
 
@@ -152,8 +144,8 @@ You can learn more about the plugin on the landing page:
 [https://intellij-v.github.io](https://intellij-v.github.io).
 
 {{< image src="/images/introducing-association/intellij-v.png"
-    alt="Screenshot showing the IntelliJ V" 
-    caption="IntelliJ V" >}}
+alt="Screenshot showing the IntelliJ V"
+caption="IntelliJ V" >}}
 
 Today we also released the first version of the plugin on behalf of the Association:
 
@@ -184,15 +176,15 @@ Now, for many built-in V types, debuggers show a raw form that is difficult or i
 with.
 
 {{< image src="/images/introducing-association/raw-debugger-view.png"
-    alt="Screenshot showing the debugger raw values for V array type" 
-    caption="Current V array representation in debugger" >}}
+alt="Screenshot showing the debugger raw values for V array type"
+caption="Current V array representation in debugger" >}}
 
 We plan to make their display at approximately the same level as they are already done in the plugin
 for JetBrains IDE.
 
 {{< image src="/images/introducing-association/idea-debugger-view.png"
-    alt="Screenshot showing the debugger inside IntelliJ V plugin"
-    caption="Types view in IntelliJ V plugin" >}}
+alt="Screenshot showing the debugger inside IntelliJ V plugin"
+caption="Types view in IntelliJ V plugin" >}}
 
 ### Language Grammar Formalization
 
@@ -203,8 +195,8 @@ One step is to formalize the grammar so that it can be represented as a formaliz
 EBNF format.
 
 {{< image src="/images/introducing-association/ebnf-example.png"
-    alt="Screenshot showing the EBNF grammar for Golang"
-    caption="EBNF grammar of Golang" >}}
+alt="Screenshot showing the EBNF grammar for Golang"
+caption="EBNF grammar of Golang" >}}
 
 In parallel with the development of the two things above, we will continue to formalize the grammar,
 which will result in a page in the documentation with a complete grammar of the language that can be
