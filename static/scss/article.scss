@@ -367,7 +367,7 @@ html[data-theme="dark"] {
           height: auto;
           margin: 0 0 10px;
           display: block;
-          border: 1px solid var(--divider-color);
+          box-shadow: 0 0 0 1px var(--divider-color);
           border-radius: 10px;
         }
 
@@ -376,6 +376,15 @@ html[data-theme="dark"] {
           color: var(--secondary-color);
           text-align: center;
         }
+      }
+
+      video {
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 10px;
+        display: block;
+        box-shadow: 0 0 0 1px var(--divider-color);
+        border-radius: 10px;
       }
     }
   }

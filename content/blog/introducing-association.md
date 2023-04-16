@@ -175,7 +175,7 @@ alt="Screenshot showing the IntelliJ V">
 
 Today we also released the first version of the plugin on behalf of the Association:
 
-{{< article-link link="/intellij-v-beta-4.md" >}}
+{{< article-link link="/intellij-v-beta.4.md" >}}
 
 ## Plans
 

@@ -1616,13 +1616,21 @@ html[data-theme=dark] {
   height: auto;
   margin: 0 0 10px;
   display: block;
-  border: 1px solid var(--divider-color);
+  box-shadow: 0 0 0 1px var(--divider-color);
   border-radius: 10px;
 }
 .article .article-content .content figure figcaption {
   font-size: 14px;
   color: var(--secondary-color);
   text-align: center;
+}
+.article .article-content .content video {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  display: block;
+  box-shadow: 0 0 0 1px var(--divider-color);
+  border-radius: 10px;
 }
 
 .page-404 {
