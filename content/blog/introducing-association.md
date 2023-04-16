@@ -48,12 +48,12 @@ The V Open Source Community Association is registered on the
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
 
-### What Association has done already?
+## What Association has done already?
 
 Association is released on the website where we have collected our developments.
 We hope they make learning a language easier and more productive.
 
-#### New Documentation
+### New Documentation
 
 We have revised most of the documentation articles and placed them in a convenient form on
 [docs.vosca.dev](https://docs.vosca.dev).
@@ -68,7 +68,7 @@ Learn more in this article:
 
 {{< article-link link="/meet-new-documentation.md" >}}
 
-#### Playground
+### Playground
 
 Prior to the creation of the Association, we had already improved the official Playground with a new
 look and feel.
@@ -79,7 +79,7 @@ run the program.
 See updated Playground in action on
 [play.vosca.dev](https://play.vosca.dev).
 
-##### Embedded playground component
+#### Embedded playground component
 
 As part of the Playground update, we also created a component that can be embedded in any
 page.
@@ -104,7 +104,7 @@ Learn more in this article:
 
 {{< article-link link="/meet-updated-playground.md" >}}
 
-#### Vings
+### Vings
 
 Vings is a platform for learning V through solving small problems.
 On it, anyone can start learning V through solving problems, each of which will link to the
@@ -114,7 +114,7 @@ Learn more in this article:
 
 {{< article-link link="/meet-vings-platform.md" >}}
 
-#### ORM
+### ORM
 
 One of the main parts of modern web development is working with a database.
 In V, the tool for high-level interactions with the database is ORM.
@@ -128,7 +128,7 @@ all queries and array as a type, even for queries with `limit 1` or `id == ?`.
 
 {{< article-link link="/is-v-orm-direction-right.md" >}}
 
-#### Modules API website
+### Modules API website
 
 V itself has a fairly extensive standard library with many modules.
 
@@ -143,7 +143,7 @@ Learn more in this article:
 
 {{< article-link link="/meet-modules-platform.md" >}}
 
-#### Blog
+### Blog
 
 We think any language should have a platform where it posts information about updates, changes, or
 event announcements.
@@ -152,7 +152,7 @@ We have created a blog where we will post news about V so that users can get new
 information quickly.
 We will also be posting tutorials there that will tell users how to do something in V.
 
-#### IntelliJ V
+### IntelliJ V
 
 The JetBrains IDE plugin is now also part of the Association and will be further developed
 officially.
@@ -177,9 +177,9 @@ Today we also released the first version of the plugin on behalf of the Associat
 
 {{< article-link link="/intellij-v-beta-4.md" >}}
 
-### Plans
+## Plans
 
-#### New Language Server
+### New Language Server
 
 The Association's first big task will be to develop a new Language Server for V.
 This is an important project as most programmers use VS Code or Vim, for which the plugins provide
@@ -193,7 +193,7 @@ A quality LS will solve this problem and make V much more convenient to use.
 
 Open beta testing is planned in 2 months, we will announce the start of testing in advance.
 
-#### Debug enhancements with GDB and LLDB
+### Debug enhancements with GDB and LLDB
 
 In parallel with the creation of the new LS, we plan to qualitatively improve the debugging
 capabilities of the V code.
@@ -226,7 +226,7 @@ alt="Screenshot showing the debugger inside IntelliJ V plugin">
 
 {{< /rawhtml >}}
 
-#### Language Grammar Formalization
+### Language Grammar Formalization
 
 Right now, a small group of developers is developing a new compiler architecture.
 The goal is to make a compiler according to all the canons of the industry, taking into account all
@@ -249,7 +249,7 @@ In parallel with the development of the two things above, we will continue to fo
 which will result in a page in the documentation with a complete grammar of the language that can be
 used to create third-party tools.
 
-#### Continue improving ORM
+### Continue improving ORM
 
 There is still a lot of work to improve ORM.
 Now the ORM functionality covers only the basic needs for performing CRUD tasks,
