@@ -1,5 +1,5 @@
 <div class="big-article-card">
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" aria-label="{{ .Params.summary | markdownify }}">
         {{ $image := resources.Get .Params.image }}
         {{ with $image }}
             <img src="{{ .RelPermalink }}"
