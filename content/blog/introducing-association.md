@@ -50,7 +50,7 @@ track of where the money is going and how it's being spent.
 
 ## What Association has done already?
 
-Association is released on the website where we have collected our developments.
+The Association is released on the website where we have collected our developments.
 We hope they make learning a language easier and more productive.
 
 ### New Documentation
@@ -86,7 +86,6 @@ page.
 Thus, on any page you can get a convenient playground where you can edit and run V code.
 This component is already used in
 [Documentation](https://docs.vosca.dev),
-[Vings](https://learn.vosca.dev/vings),
 [Modules](https://modules.vosca.dev/),
 and here, in blog.
 
@@ -103,16 +102,6 @@ fn main() {
 Learn more in this article:
 
 {{< article-link link="/meet-updated-playground.md" >}}
-
-### Vings
-
-Vings is a platform for learning V through solving small problems.
-On it, anyone can start learning V through solving problems, each of which will link to the
-documentation about a current topic.
-
-Learn more in this article:
-
-{{< article-link link="/meet-vings-platform.md" >}}
 
 ### ORM
 
