@@ -33,39 +33,22 @@ Let us look at the following examples in different DBMSs.
 
 ### SQLite
 
-{{< rawhtml >}}
-
-<figure>
-<img src="/images/is-v-orm-direction-right/sqlite.png"
-alt="Screenshot showing the simple SQLite example"/>
-<figcaption>SQLite example</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/is-v-orm-direction-right/sqlite.png"
+    alt="Screenshot showing the simple SQLite example"
+    caption="SQLite example" >}}
 
 ### PostgreSQL
 
-{{< rawhtml >}}
-
-<figure>
-<img src="/images/is-v-orm-direction-right/postgres.png"
-alt="Screenshot showing the simple PostgreSQL example"/>
-<figcaption>PostgreSQL example</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/is-v-orm-direction-right/postgres.png"
+    alt="Screenshot showing the simple PostgreSQL example"
+    caption="PostgreSQL example" >}}
 
 ### MySQL
 
-{{< rawhtml >}}
+{{< image src="/images/is-v-orm-direction-right/mysql.png"
+    alt="Screenshot showing the simple MySQL example"
+    caption="MySQL example" >}}
 
-<figure>
-<img src="/images/is-v-orm-direction-right/mysql.png"
-alt="Screenshot showing the simple MySQL example"/>
-<figcaption>MySQL example</figcaption>
-</figure>
-
-{{< /rawhtml >}}
 
 Do you see the differences between these simple queries?
 I do not.
@@ -151,15 +134,9 @@ and it was possible to write anything in the expression without any validation.
 However, the checker has since been improved, although **there is still room for growth**.
 Therefore, this point is now considered true.
 
-{{< rawhtml >}}
-
-<figure>
-<img src="/images/is-v-orm-direction-right/order-by.png"
-alt="Screenshot showing the error from V ORM that the field from `order by` is not found."/>
-<figcaption>V ORM in latest V</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/is-v-orm-direction-right/order-by.png"
+    alt="Screenshot showing the error from V ORM that the field from `order by` is not found."
+    caption="V ORM in latest V." >}}
 
 I want to add even more checks for expressions
 **so that cgen gets only valid code and the hints are as clear as possible.**
@@ -203,15 +180,9 @@ as it would require either constantly requesting developers
 to add new functionality or reverting to raw SQL queries.
 Because if you named it SQL, be kind to implement the standard.
 
-{{< rawhtml >}}
-
-<figure>
-<img src="/images/is-v-orm-direction-right/vql.png"
-alt="Screenshot showing the V ORM query in SQLite"/>
-<figcaption>V ORM query in SQLite.</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/is-v-orm-direction-right/vql.png"
+    alt="Screenshot showing the V ORM query in SQLite"
+    caption="V ORM query in SQLite." >}}
 
 By the way, I would like to suggest changing the `sql` keyword to `vql`,
 which stands for V Query Language.
@@ -219,7 +190,7 @@ This is because the language is based on SQL
 but does not fully adhere to the SQL standard.
 After renaming, we would have more flexibility to make changes that do not fit into the SQL.
 Perhaps we need to provide another user-friendly interface for raw queries.
-I haven't thought about it enough yet.
+I have not thought about it enough yet.
 But when I fix low-level libraries,
 I will write another article with thoughts about it.
 

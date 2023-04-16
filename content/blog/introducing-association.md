@@ -162,16 +162,9 @@ feature set.
 You can learn more about the plugin on the landing page:
 [https://intellij-v.github.io](https://intellij-v.github.io).
 
-{{< rawhtml >}}
-
-<figure>
-<img
-src="/images/introducing-association/intellij-v.png"
-alt="Screenshot showing the IntelliJ V">
-<figcaption>IntelliJ V</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/introducing-association/intellij-v.png"
+    alt="Screenshot showing the IntelliJ V" 
+    caption="IntelliJ V" >}}
 
 Today we also released the first version of the plugin on behalf of the Association:
 
@@ -201,30 +194,16 @@ capabilities of the V code.
 Now, for many built-in V types, debuggers show a raw form that is difficult or impossible to work
 with.
 
-{{< rawhtml >}}
-
-<figure>
-<img
-src="/images/introducing-association/raw-debugger-view.png"
-alt="Screenshot showing the debugger raw values for V array type">
-<figcaption>Current V array representation in debugger</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/introducing-association/raw-debugger-view.png"
+    alt="Screenshot showing the debugger raw values for V array type" 
+    caption="Current V array representation in debugger" >}}
 
 We plan to make their display at approximately the same level as they are already done in the plugin
 for JetBrains IDE.
 
-{{< rawhtml >}}
-
-<figure>
-<img
-src="/images/introducing-association/idea-debugger-view.png"
-alt="Screenshot showing the debugger inside IntelliJ V plugin">
-<figcaption>Types view in IntelliJ V plugin</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/introducing-association/idea-debugger-view.png"
+    alt="Screenshot showing the debugger inside IntelliJ V plugin"
+    caption="Types view in IntelliJ V plugin" >}}
 
 ### Language Grammar Formalization
 
@@ -234,16 +213,9 @@ the mistakes made earlier.
 One step is to formalize the grammar so that it can be represented as a formalized description in
 EBNF format.
 
-{{< rawhtml >}}
-
-<figure>
-<img
-src="/images/introducing-association/ebnf-example.png"
-alt="Screenshot showing the EBNF grammar for Golang">
-<figcaption>EBNF grammar of Golang</figcaption>
-</figure>
-
-{{< /rawhtml >}}
+{{< image src="/images/introducing-association/ebnf-example.png"
+    alt="Screenshot showing the EBNF grammar for Golang"
+    caption="EBNF grammar of Golang" >}}
 
 In parallel with the development of the two things above, we will continue to formalize the grammar,
 which will result in a page in the documentation with a complete grammar of the language that can be

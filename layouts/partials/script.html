@@ -1,6 +1,8 @@
 <script type="text/javascript" src="/js/header.js"></script>
 <script type="text/javascript" src="/js/header-search.js"></script>
 <script type="text/javascript" src="/js/pre-code-blocks.js"></script>
+
+{{ if eq .Params.Page "Blog" }}
 <script type="text/javascript" src="/js/vlang-playground.js"></script>
 
 <script>
@@ -20,3 +22,4 @@
         });
     })
 </script>
+{{ end }}

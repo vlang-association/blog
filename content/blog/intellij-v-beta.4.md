@@ -46,13 +46,8 @@ for which they describe the documentation.
 In this update, we have added a link so that when you rename a symbol, the name in the comment will
 also be renamed.
 
-{{< rawhtml >}}
-<figure>
-<img
-src="/images/intellij-v-beta.4/comment-highlighting.png"
-alt="Screenshot showing the comment highlighting">
-</figure>
-{{< /rawhtml >}}
+{{< image src="/images/intellij-v-beta.4/comment-highlighting.png"
+    alt="Screenshot showing the comment highlighting" >}}
 
 We also highlight such names in a different color to make it easier to distinguish
 them from a regular text.
@@ -64,13 +59,8 @@ such as now always returning a Result type from `sql db { ... }` expression.
 We fixed handling in the plugin that worked the old way, so now the plugin will tell you if there
 is an error somewhere:
 
-{{< rawhtml >}}
-<figure>
-<img
-src="/images/intellij-v-beta.4/orm-fixes.png"
-alt="Screenshot showing the error about unhandled Result type of ORM sql expression">
-</figure>
-{{< /rawhtml >}}
+{{< image src="/images/intellij-v-beta.4/orm-fixes.png"
+    alt="Screenshot showing the error about unhandled Result type of ORM sql expression" >}}
 
 ## Other changes
 

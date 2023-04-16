@@ -1,8 +1,14 @@
 <a class="article-card" href="{{ .RelPermalink }}">
     <span class="image">
-        <img src="/{{ .Params.image }}"
-             alt="{{ .Params.summary | markdownify }}"
-        />
+        {{ $image := resources.Get .Params.image }}
+
+        {{ with $image }}
+            {{ $imageMinified := .Resize "600x" }}
+
+            <img src="{{ $imageMinified.RelPermalink }}"
+                 alt="{{ .Params.summary | markdownify }}"
+            />
+        {{ end }}
     </span>
 
     {{ $dateTime := .Params.date.Format "2006-01-02" }}
@@ -18,7 +24,14 @@
 
     <p class="author">
         <span class="avatar">
-            <img src="/images/avatar/{{ .Params.authorlink }}.png" alt="{{ .Params.authorname }} avatar">
+            {{ $imageUrl := printf "%s%s%s" "/images/avatar/" .Params.authorlink ".png" }}
+            {{ $avatarImage := resources.Get $imageUrl }}
+            {{ with $avatarImage }}
+                {{ $imageMinified := .Resize "32x" }}
+                <img src="{{ $imageMinified.RelPermalink }}"
+                     alt="{{ .Params.authorname }}"
+                />
+            {{ end }}
         </span>
         <span>
             {{ .Params.authorname }}

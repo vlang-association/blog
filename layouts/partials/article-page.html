@@ -40,9 +40,14 @@
                             {{ if $authorLink }}
                                 <p class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span class="avatar">
-                                    <img src="/images/avatar/{{ $authorLink }}.png"
-                                         alt="{{ $authorName }} avatar"
-                                         itemprop="image">
+                                    {{ $imageUrl := printf "%s%s%s" "/images/avatar/" $authorLink ".png" }}
+                                    {{ $image := resources.Get $imageUrl }}
+                                    {{ with $image }}
+                                        {{ $imageMinified := .Resize "32x" }}
+                                        <img src="{{ $imageMinified.RelPermalink }}"
+                                             alt="{{ $authorName }}"
+                                        />
+                                    {{ end }}
                                 </span>
                                     <a href="/people/{{ $authorLink }}" itemprop="url">
                                     <span itemprop="name">

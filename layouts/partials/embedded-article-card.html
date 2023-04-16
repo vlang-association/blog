@@ -1,8 +1,12 @@
 <div class="embedded-article-card">
     <a href="{{ .RelPermalink }}">
-        <img src="/{{ .Params.image }}"
-             alt="{{ .Params.summary | markdownify }}"
-        />
+        {{ $image := resources.Get .Params.image }}
+        {{ with $image }}
+            {{ $imageMinified := .Resize "1000x" }}
+            <img src="{{ $imageMinified.RelPermalink }}"
+                 alt="{{ .Params.summary | markdownify }}"
+            />
+        {{ end }}
     </a>
     <div class="information">
         <div class="authors">
@@ -14,7 +18,14 @@
                 {{ if $authorLink }}
                     <p class="author">
                         <span class="avatar">
-                            <img src="/images/avatar/{{ $authorLink }}.png" alt="{{ $authorName }} avatar">
+                            {{ $imageUrl := printf "%s%s%s" "/images/avatar/" $authorLink ".png" }}
+                            {{ $image := resources.Get $imageUrl }}
+                            {{ with $image }}
+                                {{ $imageMinified := .Resize "32x" }}
+                                <img src="{{ $imageMinified.RelPermalink }}"
+                                     alt="{{ $authorName }}"
+                                />
+                            {{ end }}
                         </span>
                         <span itemprop="name">
                             {{ $authorName }}

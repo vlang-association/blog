@@ -3,7 +3,6 @@
         <span class="label">Posts by</span>
         <h1 class="title-content">{{ .Title | markdownify }}</h1>
     </div>
-    <!--    <p>{{ .Content }}</p>-->
 
     {{ $authorlink := .File.BaseFileName }}
 
@@ -13,7 +12,13 @@
         </div>
 
         <div class="avatar">
-            <img src="/images/avatar/{{ $authorlink }}.png" alt="{{ .Params.authorname }} avatar">
+            {{ $imageUrl := printf "%s%s%s" "/images/avatar/" $authorlink ".png" }}
+            {{ $image := resources.Get $imageUrl }}
+            {{ with $image }}
+                <img src="{{ $image.RelPermalink }}"
+                     alt="{{ .Params.authorname }} avatar"
+                />
+            {{ end }}
         </div>
     </div>
 
