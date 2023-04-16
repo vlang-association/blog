@@ -1,3 +1,9 @@
-<div class="v-code">
+{{ $playable := index .Attributes "play"}}
+{{ $class :=  "v-code" }}
+{{ if $playable }}
+    {{ $class = print $class " play" }}
+{{ end }}
+
+<div class="{{$class}}">
     <pre>{{.Inner}}</pre>
 </div>

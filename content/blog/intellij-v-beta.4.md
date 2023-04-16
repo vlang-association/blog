@@ -18,7 +18,6 @@ The new version of the plugin can be downloaded via the IDE.
 See
 [instruction](https://plugins.jetbrains.com/plugin/20287-vlang/docs/quick-start-guide.html#install-update-the-plugin)
 for more details.
-
 Or download
 [directly from GitHub](https://github.com/intellij-v/intellij-v/releases)
 and install manually.
