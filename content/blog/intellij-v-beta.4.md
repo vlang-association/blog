@@ -10,7 +10,7 @@ date: 2023-04-05T09:34:23+04:00
 image: images/intellij-v-beta.4/cover.png
 ---
 
-**beta.4** — the first plugin released under VOSCA.
+**beta.4** — the first plugin version released under VOSCA.
 It took a long time to create an association and projects for it, so it is a small release,
 but we still have something to show.
 
@@ -24,7 +24,7 @@ and install manually.
 
 ## Debugger improvements
 
-Debugging is undoubtedly one of the great benefits of the plugin, as it provides a convenient way to
+Debugging is undoubtedly one of the great features of the plugin, as it provides a convenient way to
 find bugs in programs.
 One of the very handy features of debuggers is to execute small expressions.
 However, the LLDB and GDB debuggers do not support this feature for V, so we decided to
@@ -46,7 +46,7 @@ In this update, we have added a link so that when you rename a symbol, the name 
 also be renamed.
 
 {{< image src="/images/intellij-v-beta.4/comment-highlighting.png"
-    alt="Screenshot showing the comment highlighting" >}}
+alt="Screenshot showing the comment highlighting" >}}
 
 We also highlight such names in a different color to make it easier to distinguish
 them from a regular text.
@@ -59,7 +59,7 @@ We fixed handling in the plugin that worked the old way, so now the plugin will 
 is an error somewhere:
 
 {{< image src="/images/intellij-v-beta.4/orm-fixes.png"
-    alt="Screenshot showing the error about unhandled Result type of ORM sql expression" >}}
+alt="Screenshot showing the error about unhandled Result type of ORM sql expression" >}}
 
 ## Other changes
 
