@@ -1537,7 +1537,7 @@ html[data-theme=dark] {
   grid-template-columns: 100%;
 }
 .article .article-content .content {
-  margin-top: -130px;
+  margin-top: -175px;
   margin-bottom: 80px;
 }
 @media (max-width: 1000px) {
