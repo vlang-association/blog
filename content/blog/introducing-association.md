@@ -89,10 +89,10 @@ This component is already used in
 [Modules](https://modules.vosca.dev/),
 and here, in blog.
 
-```v
+```v {play=true}
 fn main() {
 	areas := ['game', 'web', 'tools', 'science', 'systems',
-	'embedded', 'drivers', 'GUI', 'mobile']
+	          'embedded', 'drivers', 'GUI', 'mobile']
 	for area in areas {
 		println('Hello, ${area} developers!')
 	}

@@ -7,7 +7,6 @@
     <script type="text/javascript" src="/js/theme.js"></script>
 
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/vlang-playground.css">
 
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -105,6 +104,8 @@
     }
     </script>
     <!-- End Schema.org -->
+
+    <link rel="stylesheet" href="https://vosca.dev/pc/vlang-playground.css">
 
     <title>{{ .Title | markdownify }} | V Association</title>
 </head>
