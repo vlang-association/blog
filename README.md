@@ -21,13 +21,7 @@ To run blog server, run the following command:
 npm run serve
 ```
 
-If you want change styles, make sure you have installed `sass` globally:
-
-```bash
-npm install -g sass
-```
-
-And run the following command to watch for changes:
+If you want to change styles, run the following command to watch for changes:
 
 ```bash
 npm run sass-watch
