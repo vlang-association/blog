@@ -82,6 +82,9 @@ The following roadmap can make this point valid
 - [ ] The `in` operator
 - [ ] Support for structures that do not have an `id` field
 - [ ] Support for migrations
+- [ ] Make V ORM always an expression, regardless of the expressions inside.
+  Now only select is the expression, and the rest(insert, update, delete) are statements.
+  This leads to problems not only when writing compiler code but also for users.
 
 > And when more complex queries are allowed,
 > and migrations modify tables and their data, we can consider this point fully valid.
@@ -101,7 +104,7 @@ fn (mut app App) get_repo_issue_count(id int) int {
 }
 ```
 
-We just took the `id` value and used it at the destination. But there is also a problem.
+We just took the `id` value and used it in V ORM expression. But there is also a problem.
 Any V expression is any ORM expression. Before the checker fixes, we could even write such queries:
 
 ```v
