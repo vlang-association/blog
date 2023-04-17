@@ -6,7 +6,7 @@ page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
 categories: [ "Announcements", "IntelliJ V" ]
-date: 2023-04-05T09:34:23+04:00
+date: 2023-04-17T00:00:01+04:00
 image: images/intellij-v-beta.4/cover.png
 ---
 
@@ -63,6 +63,6 @@ alt="Screenshot showing the error about unhandled Result type of ORM sql express
 
 ## Other changes
 
-We also fixed a few bugs and made some small improvements, you can check them out
-in [changelog](https://github.com/intellij-v/intellij-v/blob/main/CHANGELOG.md).
-
+We also fixed a few bugs and made some small improvements.
+You can check them out in
+[changelog](https://github.com/intellij-v/intellij-v/blob/main/CHANGELOG.md).

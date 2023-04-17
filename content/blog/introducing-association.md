@@ -8,7 +8,7 @@ authorlink: petr-makhnev
 co_authorname: Mark aka walkingdevel
 co_authorlink: walkingdevel
 categories: [ "Announcements", "Association" ]
-date: 2023-03-30T09:34:23+04:00
+date: 2023-04-17T00:00:02+04:00
 image: images/introducing-association/vosca.png
 pinned: true
 ---

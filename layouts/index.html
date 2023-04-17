@@ -21,8 +21,7 @@
                 <h2>Latest</h2>
                 <div class="article-cards">
                     {{ range first 10 .Site.Pages.ByPublishDate.Reverse }}
-                        <!-- Select the blog posts only -->
-                        {{ if eq .Params.Page "Blog" }}
+                        {{ if and (eq .Params.Page "Blog") (not .Params.pinned) }}
                             {{ partial "article-card.html" . }}
                         {{ end }}
                     {{ end }}

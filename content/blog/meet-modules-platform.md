@@ -6,7 +6,7 @@ page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
 categories: [ "Announcements" ]
-date: 2023-03-30T09:34:23+04:00
+date: 2023-04-17T00:00:01+04:00
 image: images/meet-modules-platform/cover.png
 ---
 
