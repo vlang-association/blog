@@ -1627,7 +1627,7 @@ html[data-theme=dark] {
 .article .article-content .content video {
   max-width: 100%;
   height: auto;
-  margin: 0 0 10px;
+  margin: 0 0 30px;
   display: block;
   box-shadow: 0 0 0 1px var(--divider-color);
   border-radius: 10px;
