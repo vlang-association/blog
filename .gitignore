@@ -1,5 +1,6 @@
 # Ignore the output directory
 public
+resources/_gen
 
 # Ignore package locks
 package-lock.json
