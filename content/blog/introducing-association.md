@@ -221,3 +221,9 @@ Based on the existing problems and user wishes, we have built the following road
 - Support for migrations
 - Test and CI coverage for SQLite, PostgreSQL, MySQL, MSSQL
 - The ability for users to expand the functionality of ORM independently
+
+## Afterwords
+
+We are very glad that we were finally able to establish the Association, it was a long and difficult
+way, but it is worth it!
+We hope that the VOSCA will help to make V even better and more convenient for anyone.
