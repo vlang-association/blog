@@ -22,7 +22,7 @@ This playground
 [returned to online](https://twitter.com/v_language/status/1583480823151329280)
 October, 21 2022.
 
-It had problems, from a very slow editor to a look I did not like.
+It had problems, from a slow and inconvenient editor to a look I did not like.
 In two days I updated appearance, improved editor, and on October 25, 2022, the new
 playground was
 [launched](https://discord.com/channels/592103645835821068/592723761812209664/1034225971324256319).
@@ -63,6 +63,7 @@ site.
 We have rewritten all backend, improved language support in the editor, added the ability to view
 generated C code, as well as the ability to pass the parameters of compilation and program
 launch.
+Playground can now work with base64 encoded code and GitHub Gists code.
 The new playground also now can check the output of the program to match the output that was
 passed as the expected output.
 This is a useful feature for creating interactive lessons.

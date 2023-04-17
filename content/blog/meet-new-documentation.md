@@ -43,7 +43,9 @@ By comparison, the official documentation contains 6,700 lines when our new docu
 The documentation grew by 56%, which we believe is a great result.
 
 Some sections now have good documentation, for example,
-[compile-time reflection](https://docs.vosca.dev/concepts/compile-time/reflection.html).
+[compile-time reflection](https://docs.vosca.dev/concepts/compile-time/reflection.html)
+or
+[generics](https://docs.vosca.dev/concepts/generics.html).
 
 ## Features
 
@@ -94,9 +96,10 @@ We were able to do this thanks to the Playground update described in the followi
 
 ### New Getting Started section
 
-Thanks to the simple partitioning, we have decided that in the documentation it is useful to have a
-[section](https://docs.vosca.dev/getting-started/overview.html)
-that guides beginners through the process of setting up the language.
+The V documentation does not have a specific section with articles that describe all the necessary
+steps to get started with V.
+Therefore, we decided that in our documentation we want to have such a
+[section](https://docs.vosca.dev/getting-started/overview.html).
 
 We have also moved to this section
 [FAQ](https://docs.vosca.dev/getting-started/faq.html)

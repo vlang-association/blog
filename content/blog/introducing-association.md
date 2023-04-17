@@ -19,8 +19,9 @@ Hi, we,
 from the V development team, announce the creation of the **V Open Source Community Association**
 aka VOSCA.
 
-The Association is a **non-profit organization** that is dedicated to the development of the V
-language.
+The Association is a
+[non-profit organization](https://opencollective.com/vosca)
+that is dedicated to the development of the V language.
 
 ## Prelude
 
