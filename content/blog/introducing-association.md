@@ -44,7 +44,7 @@ For example, **hire people** who will be involved in language development, docum
 etc.
 
 The V Open Source Community Association is registered on the
-[Open Collective](https://opencollective.com/vsof) platform,
+[Open Collective](https://opencollective.com/vosca) platform,
 allowing anyone interested to keep
 track of where the money is going and how it's being spent.
 
