@@ -49,11 +49,20 @@ Let us look at the following examples in different DBMSs.
     alt="Screenshot showing the simple MySQL example"
     caption="MySQL example" >}}
 
-
 Do you see the differences between these simple queries?
 I do not.
 You can, of course, write more complex queries so that differences begin to appear,
 but you may not be able to express such code in V ORM.
+
+{{< image src="/images/is-v-orm-direction-right/orm-select-source-code.png"
+alt="Screenshot showing the source code of vlib/orm/orm.v"
+caption="Source code of vlib/orm/orm.v" >}}
+
+V ORM generates SQL in one place regardless of the database.
+In this case, it will be difficult to expand the functionality that differs between databases.
+What can we do with NoSQL databases in the future? With this approach,
+we are limited only to SQL databases with primitive syntax.
+And none of the third-party developers will be able to add their database without interfering with the compiler.
 
 What about migrations between databases?
 How often do you need to change the DBMS in your projects?
@@ -183,6 +192,8 @@ Because if you named it SQL, be kind to implement the standard.
 {{< image src="/images/is-v-orm-direction-right/vql.png"
     alt="Screenshot showing the V ORM query in SQLite"
     caption="V ORM query in SQLite." >}}
+
+> But is the complexity of the compiler and the support of the SQL standard worth it?
 
 By the way, I would like to suggest changing the `sql` keyword to `vql`,
 which stands for V Query Language.
