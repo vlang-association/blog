@@ -150,7 +150,7 @@ From `items` we need not all fields, only `full_name`, `description`, `stargazer
 and `html_url`.
 
 The
-[`json`]((https://docs.vosca.dev/concepts/working-with-json.html))
+[`json`](https://docs.vosca.dev/concepts/working-with-json.html)
 module does not require describing all fields,
 we can specify only the necessary fields, and the rest will be ignored.
 
