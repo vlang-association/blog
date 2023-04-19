@@ -24,6 +24,7 @@
                                 {{ $imageMinified := .Resize "32x" }}
                                 <img src="{{ $imageMinified.RelPermalink }}"
                                      alt="{{ $authorName }}"
+                                     loading="lazy"
                                 />
                             {{ end }}
                         </span>

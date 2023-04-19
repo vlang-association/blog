@@ -7,6 +7,7 @@
 
             <img src="{{ $imageMinified.RelPermalink }}"
                  alt="{{ .Params.summary | markdownify }}"
+                 loading="lazy"
             />
         {{ end }}
     </span>
@@ -30,6 +31,7 @@
                 {{ $imageMinified := .Resize "32x" }}
                 <img src="{{ $imageMinified.RelPermalink }}"
                      alt="{{ .Params.authorname }}"
+                     loading="lazy"
                 />
             {{ end }}
         </span>

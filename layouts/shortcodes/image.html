@@ -4,7 +4,7 @@
 
 <figure>
     {{ $image := (resources.Get $src).RelPermalink }}
-    <img src="{{ $image }}" alt="{{ $alt }}"/>
+    <img src="{{ $image }}" alt="{{ $alt }}" loading="lazy"/>
     {{ if $caption }}
         <figcaption>{{ $caption }}</figcaption>
     {{ end }}
