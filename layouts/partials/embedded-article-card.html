@@ -1,5 +1,5 @@
 <div class="embedded-article-card">
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" aria-label="{{ .Title | markdownify }} link">
         {{ $image := resources.Get .Params.image }}
         {{ with $image }}
             {{ $imageMinified := .Resize "1000x" }}
