@@ -12,6 +12,9 @@
 
 html {
   --title-color: var(--text-color);
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 html[data-theme="dark"] {
