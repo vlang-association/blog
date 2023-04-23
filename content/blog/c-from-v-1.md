@@ -72,7 +72,7 @@ fn main() {
 
 We could include the C library directly in this file, but then it would be difficult to reuse it.
 
-Let's create a separate module, which we will call `fib`. Let's create a folder **fib** and create a file **fib.v** in
+Let us create a separate module, which we will call `fib`. Let's create a folder **fib** and create a file **fib.v** in
 it:
 
 ```v
@@ -83,7 +83,7 @@ This file will contain all the necessary declarations for calling the C function
 
 ## Call C function from V
 
-Finally, we're ready to call our function from C.
+Finally, we are ready to call our function from C.
 
 To do this, in V you can define functions/structures with a special `C.` prefix:
 
@@ -124,7 +124,7 @@ header file contains our function definitions.
 
 Thus, we told the V compiler where to get the definitions and implementation of functions.
 
-Let's add a wrapper for our function, for more convenient use:
+Let us add a wrapper for our function, for more convenient use:
 
 **c_from_v/fib/fib.v**
 
@@ -169,4 +169,4 @@ Output:
 
 On this we are done with the first part.
 
-In the [next article](/c-from-v-2.md), we'll take a look at what the generated C code looks like.
+In the [next article](/c-from-v-2), we'll take a look at what the generated C code looks like.
