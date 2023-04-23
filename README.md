@@ -1,6 +1,7 @@
 # V Open Source Community Association Blog
 
 [![Association Official Project][AssociationOfficialBadge]][AssociationUrl]
+[![Build Status][WorkflowBadge]][WorkflowUrl]
 
 Source code for the [V Open Source Community Association Blog](https://blog.vosca.dev).
 
@@ -35,4 +36,8 @@ file for the full license text.
 
 [AssociationOfficialBadge]: https://vosca.dev/badge.svg
 
+[WorkflowBadge]: https://github.com/vlang-association/blog/actions/workflows/content-ci.yml/badge.svg
+
 [AssociationUrl]: https://vosca.dev
+
+[WorkflowUrl]: https://github.com/vlang-association/blog/commits/main
