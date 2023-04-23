@@ -78,7 +78,7 @@ The following roadmap can make this point valid
 (once these items are finished, they will be marked as completed):
 
 - [ ] Support for optional fields for structures and `NULL`s
-- [ ] The `like` operator
+- [x] [The `like` operator](https://github.com/vlang/v/pull/18020)
 - [ ] The `in` operator
 - [ ] Support for structures that do not have an `id` field
 - [ ] Support for migrations
