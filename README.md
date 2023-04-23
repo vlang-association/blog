@@ -3,7 +3,7 @@
 [![Association Official Project][AssociationOfficialBadge]][AssociationUrl]
 [![Build Status][WorkflowBadge]][WorkflowUrl]
 
-Source code for the [V Open Source Community Association Blog](https://blog.vosca.dev).
+Source code for of [blog.vosca.dev](https://blog.vosca.dev).
 
 ## Build locally
 
