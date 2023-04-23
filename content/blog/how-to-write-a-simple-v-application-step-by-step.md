@@ -62,7 +62,7 @@ v run .
 
 I have already prepared the URL from which we can fetch the data.
 You can open it in your browser and view the JSON output:
-https://api.github.com/search/repositories?sort=stars&order=desc&q=language:v
+<https://api.github.com/search/repositories?sort=stars&order=desc&q=language:v>
 
 GitHub returns JSON with the total number of repositories, and the `items` field contains an array
 of repositories that we need.
@@ -313,4 +313,4 @@ From the obtained results, we can conclude that the top 3 projects on V by stars
 You can ask questions or share the results of your work in the comments below, or in
 [Discord](https://discord.gg/vlang).
 
-Source code: https://github.com/vlang-association/v-tutorial-stars
+Source code: <https://github.com/vlang-association/v-tutorial-stars>
