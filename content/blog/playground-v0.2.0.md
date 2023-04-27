@@ -124,7 +124,7 @@ alt="Screenshot showing Playground Report code as Bug action">}}
 
 ## Other improvements and fixes
 
-- Added documentation: https://docs.vosca.dev/tools/playground.html
+- Added documentation: <https://docs.vosca.dev/tools/playground.html>
 - Fixed support for numbers with `_` separators, as well as general parsing of numbers.
 - When formatting, now if there are no errors, the terminal does not open automatically.
 - Added highlighting of simple attributes.
