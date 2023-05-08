@@ -80,7 +80,7 @@ The following roadmap can make this point valid
 - [ ] Support for optional fields for structures and `NULL`s
 - [x] [The `like` operator](https://github.com/vlang/v/pull/18020)
 - [ ] The `in` operator
-- [ ] Support for structures that do not have an `id` field
+- [x] [Support for structures that do not have an `id` field](https://github.com/vlang/v/pull/18140)
 - [ ] Support for migrations
 - [ ] Make V ORM always an expression, regardless of the expressions inside.
   Now only select is the expression, and the rest(insert, update, delete) are statements.
