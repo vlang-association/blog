@@ -65,7 +65,12 @@ we'll see how the alpha goes.
   [here](https://analytics.vosca.dev).
 - According to statistics as of June 5, the IntelliJ V plugin was installed **4600** times,
   **1200+** installations in May.
-- Fixed N tasks in ORM and databases, left to fix M tasks. (walkingdevel)
+- Fixed 10 tasks in the ORM and databases, but there are still around 50 tasks left to be fixed.
+These calculations are approximate and include both existing issues
+and those that are yet to be submitted but are needed.
+About half of these issues relate to the database libraries,
+which should be easier to fix compared to addressing the challenges associated with the entire ORM.
+Additionally, there are approximately 10 issues that involve adding new functionality to the ORM.
 
 ## Donations
 
