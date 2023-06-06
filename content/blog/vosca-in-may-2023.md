@@ -5,6 +5,8 @@ summary:
 page: Blog
 authorname: Petr Makhnev
 authorlink: petr-makhnev
+co_authorname: Mark aka walkingdevel
+co_authorlink: walkingdevel
 categories: [ "Association" ]
 date: 2023-06-06T06:42:10+04:00
 image: images/vosca-in-may-2023/cover.png
@@ -17,7 +19,25 @@ didn't post such an article then, since VOSCA was launched on April 17th).
 
 ## ORM Improvements
 
-walkingdevel part.
+- Added
+[support](https://github.com/vlang/v/pull/18020)
+for the new `like` keyword, which functions similarly to the `LIKE` operator in SQL.
+- [Allowed](https://github.com/vlang/v/pull/18140)
+the usage of structs for ORM without the `id` field,
+providing more flexibility in defining primary keys.
+- [Implemented](https://github.com/vlang/v/pull/18078)
+`db` type checks to ensure that it implements the `orm.Connection` interface and is not an `Option`.
+- Refactored and simplified the entire
+[checker](https://github.com/vlang/v/pull/18203)
+and
+[cgen](https://github.com/vlang/v/pull/18070)
+code for the ORM, making it more accessible for people to participate in the development process.
+This change reduces the effort required to get started with contributing to the ORM.
+- [Added](https://github.com/vlang/v/pull/18268)
+the ability to commit MySQL transactions.
+- [Added](https://github.com/vlang/v/pull/18214)
+dynamic memory allocation for each string and blob, depending on their value length.
+This ensures that there are no buffer overflows and avoids allocating extra memory for strings that are less than 512 bytes in size.
 
 ## New VLS
 
